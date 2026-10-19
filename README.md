@@ -9,12 +9,17 @@ The rules pack that the Mythoscenarium app downloads when a player clicks **Sett
 - the picture prompt rules per checkpoint family (Pony score tags, CLIP skip…),
 - the default "follow the prompt" value per picture model kind,
 - how KoboldCpp runs the story model (context window, KV cache precision, batch size),
-- which models to recommend for each size of graphics card.
+- which models to recommend for each size of graphics card,
+- the model wizard's pairings (`combos`): a story model plus an anime-family and a realistic picture
+  model for each card size and amount of system memory,
+- the wizard's looks (`looks`): the art style words new stories start with, and an optional LoRA
+  (Hugging Face repo, trigger word, strength) for the SDXL anime models.
 
 ## How the app uses it
 
 - The app ships with the same tables built in. A downloaded pack replaces the entries it names (by
-  picture model `id`, story model `repo`, rule `match`) and adds new ones.
+  picture model `id`, story model `repo`, rule `match`, look `id`) and adds new ones.
+- `recommendations` and `combos` replace the built-in lists whole when the pack has them.
 - A pack is only offered when its `version` is newer than the one in use. The player sees the list
   of changes first, installs with one click, and can undo the last install.
 - The app only accepts known fields with sane values. Downloads must be Hugging Face repo paths in a

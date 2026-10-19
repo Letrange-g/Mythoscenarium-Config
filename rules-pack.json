@@ -1,8 +1,11 @@
 {
   "format": 1,
-  "version": "2026.10.18",
+  "version": "2026.10.19.1",
   "notes": [
-    "First rules pack: the tables built into Mythoscenarium 0.2.38."
+    "Brings the rules pack level with Mythoscenarium 0.2.124 (it includes the 0.2.123 changes too).",
+    "New story models: Orion 26B-A4B, which keeps most of itself in system memory and suits cards under 24 GB; Rocinante-X 12B for small computers; Cydonia 24B.",
+    "New picture models: Z-Image Turbo for realistic and 3D-render pictures, and Anima, a small anime model for 8 to 12 GB cards.",
+    "The model wizard's pairings for each card and amount of system memory, and its six looks (anime, manga, comic, painted fantasy, realistic, 3D render), now come from this pack, so they can be improved without a new app."
   ],
   "textPresets": [
     {
@@ -10,6 +13,25 @@
       "repo": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
       "description": "Made for roleplay and storytelling, by TheDrummer. Can look at pictures you paste.",
       "vision": true
+    },
+    {
+      "name": "Orion 26B-A4B v1.1",
+      "repo": "bartowski/TheDrummer_Orion-26B-A4B-v1.1-GGUF",
+      "description": "Roleplay model by TheDrummer, built on a Gemma 4 mixture of experts: writes fast even with most of it in system memory, so it suits cards under 24 GB. Can look at pictures you paste.",
+      "vision": true,
+      "moe": true
+    },
+    {
+      "name": "Rocinante-X 12B",
+      "repo": "bartowski/TheDrummer_Rocinante-X-12B-v1-GGUF",
+      "description": "Small roleplay model by TheDrummer, for cards and computers with little memory. Cannot look at pictures.",
+      "vision": false
+    },
+    {
+      "name": "Cydonia 24B v4.3",
+      "repo": "bartowski/TheDrummer_Cydonia-24B-v4.3-GGUF",
+      "description": "Mid-size roleplay model by TheDrummer, for 16 to 24 GB cards. Cannot look at pictures.",
+      "vision": false
     }
   ],
   "imagePresets": [
@@ -60,8 +82,116 @@
       ],
       "reserveBytes": 8589934592,
       "steps": 30,
-      "width": 1024,
-      "height": 768
+      "width": 1216,
+      "height": 832
+    },
+    {
+      "id": "noobai-xl",
+      "name": "NoobAI-XL (anime)",
+      "description": "Anime and visual-novel art, built on Illustrious XL. Knows hundreds of expressions by name, can be shown a character's portrait, and draws a picture in seconds. No content filter.",
+      "kind": "checkpoint",
+      "references": true,
+      "nsfw": true,
+      "files": [
+        {
+          "repo": "Laxhar/noobai-XL-1.1",
+          "path": "NoobAI-XL-v1.1.safetensors",
+          "folder": "checkpoints",
+          "size": 7105349958
+        }
+      ],
+      "reserveBytes": 8589934592,
+      "steps": 28,
+      "width": 1216,
+      "height": 832,
+      "hints": {
+        "promptPrefix": "masterpiece, best quality, newest, absurdres, highres",
+        "negativePrefix": "worst quality, old, early, low quality, lowres, signature, username, logo, bad hands",
+        "clipSkip": 2,
+        "cfg": 5,
+        "sampler": "euler_ancestral",
+        "scheduler": "normal",
+        "tags": true,
+        "referenceWeight": 0.35,
+        "referenceEndAt": 0.6
+      }
+    },
+    {
+      "id": "anima",
+      "name": "Anima (anime, small cards)",
+      "description": "A small anime model (2B) that reads tags and plain sentences alike, for cards with 8 to 12 GB. Free for personal use only (non-commercial licence). No portrait reference.",
+      "kind": "anima",
+      "references": false,
+      "nsfw": true,
+      "files": [
+        {
+          "repo": "circlestone-labs/Anima",
+          "path": "split_files/diffusion_models/anima-aesthetic-v1.1.safetensors",
+          "folder": "diffusion_models",
+          "size": 4182230656
+        },
+        {
+          "repo": "circlestone-labs/Anima",
+          "path": "split_files/text_encoders/qwen_3_06b_base.safetensors",
+          "folder": "text_encoders",
+          "size": 1192135096
+        },
+        {
+          "repo": "circlestone-labs/Anima",
+          "path": "split_files/vae/qwen_image_vae.safetensors",
+          "folder": "vae",
+          "size": 253806246
+        }
+      ],
+      "reserveBytes": 6442450944,
+      "steps": 30,
+      "width": 1216,
+      "height": 832,
+      "hints": {
+        "promptPrefix": "masterpiece, best quality, score_7, safe",
+        "negativePrefix": "worst quality, low quality, score_1, score_2, score_3, artist name, blurry, jpeg artifacts, chromatic aberration",
+        "cfg": 4,
+        "sampler": "er_sde",
+        "scheduler": "simple",
+        "tags": true
+      }
+    },
+    {
+      "id": "z-image-turbo",
+      "name": "Z-Image Turbo (realistic)",
+      "description": "Photographic and 3D-render pictures in 8 steps, from Alibaba (Apache licence). Follows plain sentences well. No portrait reference, so faces stay less steady than with the anime models.",
+      "kind": "zimage",
+      "references": false,
+      "files": [
+        {
+          "repo": "Comfy-Org/z_image_turbo",
+          "path": "split_files/diffusion_models/z_image_turbo_int8_convrot.safetensors",
+          "folder": "diffusion_models",
+          "size": 6201001296
+        },
+        {
+          "repo": "Comfy-Org/z_image_turbo",
+          "path": "split_files/text_encoders/qwen_3_4b_fp8_mixed.safetensors",
+          "folder": "text_encoders",
+          "size": 5631994051
+        },
+        {
+          "repo": "Comfy-Org/z_image_turbo",
+          "path": "split_files/vae/ae.safetensors",
+          "folder": "vae",
+          "size": 335304388
+        }
+      ],
+      "reserveBytes": 9663676416,
+      "steps": 8,
+      "width": 1216,
+      "height": 832,
+      "hints": {
+        "cfg": 1,
+        "steps": 8,
+        "sampler": "res_multistep",
+        "scheduler": "simple"
+      }
     },
     {
       "id": "flux-dev",
@@ -79,8 +209,8 @@
       ],
       "reserveBytes": 12884901888,
       "steps": 20,
-      "width": 1024,
-      "height": 768
+      "width": 1216,
+      "height": 832
     },
     {
       "id": "chroma-hd",
@@ -111,8 +241,8 @@
       ],
       "reserveBytes": 11811160064,
       "steps": 28,
-      "width": 1024,
-      "height": 768
+      "width": 1216,
+      "height": 832
     },
     {
       "id": "hidream-full",
@@ -160,8 +290,8 @@
       ],
       "reserveBytes": 20401094656,
       "steps": 50,
-      "width": 1024,
-      "height": 768
+      "width": 1216,
+      "height": 832
     }
   ],
   "promptRules": [
@@ -188,7 +318,10 @@
       "negativePrefix": "worst quality, old, early, low quality, lowres, signature, username, logo, bad hands",
       "clipSkip": 2,
       "cfg": 5,
-      "note": "NoobAI-XL model card: quality and date tags, CFG 5, CLIP skip 2."
+      "tags": true,
+      "referenceWeight": 0.35,
+      "referenceEndAt": 0.6,
+      "note": "NoobAI-XL model card: quality and date tags, CFG 5, CLIP skip 2. A FACE reference at 0.7 from a 3D portrait melted NoobAI sprites (Matt, 0.2.59); 0.35 until 60%."
     },
     {
       "match": "animagine",
@@ -204,7 +337,10 @@
       "negativePrefix": "worst quality, low quality, lowres, bad anatomy, bad hands, signature, watermark",
       "clipSkip": 2,
       "cfg": 6,
-      "note": "Illustrious XL and its merges: booru-style tags, CLIP skip 2, CFG 5 to 7."
+      "tags": true,
+      "referenceWeight": 0.35,
+      "referenceEndAt": 0.6,
+      "note": "Illustrious XL and its merges: booru-style tags, CLIP skip 2, CFG 5 to 7. A FACE reference at 0.7 from a 3D portrait melted NoobAI sprites (Matt, 0.2.59); 0.35 until 60%."
     },
     {
       "match": "juggernaut",
@@ -237,7 +373,7 @@
       "temperature": 1,
       "minP": 0.08,
       "repetitionPenalty": 1.05,
-      "note": "Roleplay tunes (TheDrummer, anthracite, Sao10K…): temperature 1 with min-p around 0.05 to 0.1 and a light repetition penalty."
+      "note": "Roleplay tunes (TheDrummer, anthracite, Sao10K\u2026): temperature 1 with min-p around 0.05 to 0.1 and a light repetition penalty."
     },
     {
       "match": "gemma",
@@ -298,6 +434,146 @@
       "text": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
       "image": "chroma-hd",
       "why": "Chroma follows scenes closely and has no content filter, and Artemis still gets a 4-bit build next to it."
+    },
+    {
+      "minVramGB": 16,
+      "text": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
+      "image": "noobai-xl",
+      "why": "Anime sprites with clear expressions in seconds, and the small picture model leaves Artemis a bigger build.",
+      "mode": "novel"
+    },
+    {
+      "minVramGB": 16,
+      "text": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
+      "image": "none",
+      "why": "The whole card goes to the story: the sharpest Artemis build that fits and twice the story memory.",
+      "mode": "text"
+    }
+  ],
+  "combos": [
+    {
+      "minVramGB": 8,
+      "text": "bartowski/TheDrummer_Rocinante-X-12B-v1-GGUF",
+      "anime": "anima",
+      "real": "z-image-turbo",
+      "why": "A small story model and small picture models; they take turns on the card, so pictures come a little slower."
+    },
+    {
+      "minVramGB": 8,
+      "text": "bartowski/TheDrummer_Orion-26B-A4B-v1.1-GGUF",
+      "anime": "anima",
+      "real": "z-image-turbo",
+      "why": "Orion keeps most of itself in your system memory and still writes faster than you read, and it can look at pictures you paste.",
+      "minRamGB": 32
+    },
+    {
+      "minVramGB": 10,
+      "text": "bartowski/TheDrummer_Rocinante-X-12B-v1-GGUF",
+      "anime": "anima",
+      "real": "z-image-turbo",
+      "why": "A 12B story model made for roleplay next to a small picture model."
+    },
+    {
+      "minVramGB": 10,
+      "text": "bartowski/TheDrummer_Orion-26B-A4B-v1.1-GGUF",
+      "anime": "anima",
+      "real": "z-image-turbo",
+      "why": "Orion keeps most of itself in your system memory, so the card is free for pictures; it can look at pictures you paste.",
+      "minRamGB": 32
+    },
+    {
+      "minVramGB": 12,
+      "text": "bartowski/TheDrummer_Orion-26B-A4B-v1.1-GGUF",
+      "anime": "noobai-xl",
+      "real": "z-image-turbo",
+      "why": "Orion in your system memory leaves room on the card for NoobAI, the strongest anime model for sprites and expressions.",
+      "minRamGB": 32
+    },
+    {
+      "minVramGB": 16,
+      "text": "bartowski/TheDrummer_Rocinante-X-12B-v1-GGUF",
+      "anime": "noobai-xl",
+      "real": "z-image-turbo",
+      "why": "Rocinante at a sharp build and NoobAI both fit on the card."
+    },
+    {
+      "minVramGB": 16,
+      "text": "bartowski/TheDrummer_Orion-26B-A4B-v1.1-GGUF",
+      "anime": "noobai-xl",
+      "real": "z-image-turbo",
+      "why": "Orion, partly in your system memory, writes fast and sees pictures; NoobAI or Z-Image draw in seconds.",
+      "minRamGB": 32
+    },
+    {
+      "minVramGB": 24,
+      "text": "bartowski/TheDrummer_Rocinante-X-12B-v1-GGUF",
+      "anime": "noobai-xl",
+      "real": "z-image-turbo",
+      "why": "Rocinante at its sharpest build next to the picture model, both whole on the card."
+    },
+    {
+      "minVramGB": 24,
+      "text": "bartowski/TheDrummer_Orion-26B-A4B-v1.1-GGUF",
+      "anime": "noobai-xl",
+      "real": "z-image-turbo",
+      "why": "Orion, mostly on the card and a little in your system memory, writes fast and sees pictures you paste.",
+      "minRamGB": 32
+    },
+    {
+      "minVramGB": 32,
+      "text": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
+      "anime": "noobai-xl",
+      "real": "z-image-turbo",
+      "why": "Artemis, the strongest story model here, at a 4-bit build next to a fast picture model."
+    }
+  ],
+  "looks": [
+    {
+      "id": "anime",
+      "name": "Anime",
+      "blurb": "Clean anime art, bright colours, expressive faces.",
+      "family": "anime",
+      "style": "anime style, cel shading, vibrant colors"
+    },
+    {
+      "id": "manga",
+      "name": "Manga",
+      "blurb": "Black and white ink with screentones, like a printed manga page.",
+      "family": "anime",
+      "style": "manga, monochrome, greyscale, screentones, ink lineart",
+      "lora": {
+        "repo": "strkyyy/manga-ink-screentone",
+        "trigger": "m4ng41nk",
+        "strength": 0.85
+      }
+    },
+    {
+      "id": "comic",
+      "name": "Comic",
+      "blurb": "Western comic book: bold outlines, flat colours.",
+      "family": "anime",
+      "style": "western comics (style), bold ink outlines, flat colors"
+    },
+    {
+      "id": "painted",
+      "name": "Painted fantasy",
+      "blurb": "Painterly fantasy art, like a book cover.",
+      "family": "anime",
+      "style": "oil painting (medium), traditional media, painterly fantasy art"
+    },
+    {
+      "id": "realistic",
+      "name": "Realistic",
+      "blurb": "Photographic people and places.",
+      "family": "real",
+      "style": "photorealistic, natural light, detailed skin, 35mm photo"
+    },
+    {
+      "id": "cgi",
+      "name": "3D render",
+      "blurb": "Game cinematic or animated film look.",
+      "family": "real",
+      "style": "3D render, CGI, game cinematic, soft global illumination"
     }
   ]
 }
