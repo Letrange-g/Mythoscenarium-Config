@@ -1,11 +1,8 @@
 {
   "format": 1,
-  "version": "2026.10.19.1",
+  "version": "2026.10.20",
   "notes": [
-    "Brings the rules pack level with Mythoscenarium 0.2.124 (it includes the 0.2.123 changes too).",
-    "New story models: Orion 26B-A4B, which keeps most of itself in system memory and suits cards under 24 GB; Rocinante-X 12B for small computers; Cydonia 24B.",
-    "New picture models: Z-Image Turbo for realistic and 3D-render pictures, and Anima, a small anime model for 8 to 12 GB cards.",
-    "The model wizard's pairings for each card and amount of system memory, and its six looks (anime, manga, comic, painted fantasy, realistic, 3D render), now come from this pack, so they can be improved without a new app."
+    "Level with Mythoscenarium 0.2.142. The model tables are unchanged since 2026.10.19.1: the fixes from 0.2.125 to 0.2.142 (sprite style, speaker names, creatures, children always clothed) live in the app's code, so they need the new build."
   ],
   "textPresets": [
     {
@@ -373,7 +370,7 @@
       "temperature": 1,
       "minP": 0.08,
       "repetitionPenalty": 1.05,
-      "note": "Roleplay tunes (TheDrummer, anthracite, Sao10K\u2026): temperature 1 with min-p around 0.05 to 0.1 and a light repetition penalty."
+      "note": "Roleplay tunes (TheDrummer, anthracite, Sao10K…): temperature 1 with min-p around 0.05 to 0.1 and a light repetition penalty."
     },
     {
       "match": "gemma",
