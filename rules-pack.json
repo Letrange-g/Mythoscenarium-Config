@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "version": "2026.10.20.2",
+  "version": "2026.10.20.3",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.153."
+    "The tables built into Mythoscenarium 0.2.154."
   ],
   "textPresets": [
     {
@@ -459,14 +459,14 @@
     {
       "minVramGB": 24,
       "text": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
-      "image": "moss-image",
-      "why": "Artemis at a good build next to MOSS-Image, with room for the 16k story memory."
+      "image": "z-image",
+      "why": "Artemis at a good build next to Z-Image, which follows busy scenes closely and heeds what the lore says a picture must not show."
     },
     {
       "minVramGB": 32,
       "text": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
-      "image": "chroma-hd",
-      "why": "Chroma follows scenes closely and has no content filter, and Artemis still gets a 4-bit build next to it."
+      "image": "z-image",
+      "why": "Z-Image follows scenes closely and heeds what the lore says a picture must not show; at 6 GB it leaves Artemis a sharper build than Chroma would."
     },
     {
       "minVramGB": 16,
