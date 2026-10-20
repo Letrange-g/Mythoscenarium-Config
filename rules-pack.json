@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "version": "2026.10.20.3",
+  "version": "2026.10.20.4",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.154."
+    "The tables built into Mythoscenarium 0.2.159."
   ],
   "textPresets": [
     {
@@ -17,6 +17,33 @@
       "description": "Roleplay model by TheDrummer, built on a Gemma 4 mixture of experts: writes fast even with most of it in system memory, so it suits cards under 24 GB. Can look at pictures you paste.",
       "vision": true,
       "moe": true
+    },
+    {
+      "name": "MeroMero v2 31B",
+      "repo": "mradermacher/G4-MeroMero-v2-31B-GGUF",
+      "description": "Roleplay model by zerofata on Gemma 4, the same size as Artemis: its maker reports fewer clichés and more varied rerolls. New, not yet compared with Artemis. Can look at pictures you paste.",
+      "vision": true
+    },
+    {
+      "name": "Glistening Gem 31B v2.1",
+      "repo": "bartowski/sophosympatheia_Glistening-Gem-31B-v2.1-GGUF",
+      "description": "Prose-focused mix of Artemis, MeroMero and an uncensored Gemma 4, by sophosympatheia. Can glue or misspell a word now and then. New, not yet compared with Artemis. Can look at pictures you paste.",
+      "vision": true,
+      "nsfw": true
+    },
+    {
+      "name": "Qwen 3.8 27B Uncensored",
+      "repo": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
+      "description": "Uncensored Qwen 3.8 by HauhauCS: newer base and long memory, but not trained for roleplay, so its prose can be drier. New, not yet compared with Artemis. Can look at pictures you paste.",
+      "vision": true,
+      "nsfw": true
+    },
+    {
+      "name": "Wicked Tutu 31B",
+      "repo": "ReadyArt/Wicked-Tutu-31B-Final-GGUF",
+      "description": "Dark and explicit roleplay on Gemma 4, by ReadyArt. Its licence asks for personal, non-commercial use. New, not yet compared with Artemis. Cannot look at pictures.",
+      "vision": false,
+      "nsfw": true
     },
     {
       "name": "Rocinante-X 12B",
@@ -401,6 +428,27 @@
     }
   ],
   "textRules": [
+    {
+      "match": "meromero",
+      "temperature": 0.9,
+      "minP": 0.05,
+      "styleNote": "Write flowing prose: no headings, bullet points or bold labels.",
+      "note": "zerofata G4-MeroMero card: temperature 0.8 to 1.0, min-p 0.05."
+    },
+    {
+      "match": "glistening-gem",
+      "temperature": 0.8,
+      "minP": 0.1,
+      "styleNote": "Write flowing prose: no headings, bullet points or bold labels.",
+      "note": "sophosympatheia Glistening Gem card: temperature 0.8, min-p 0.1."
+    },
+    {
+      "match": "wicked-tutu",
+      "temperature": 1,
+      "topP": 0.92,
+      "styleNote": "Write flowing prose: no headings, bullet points or bold labels.",
+      "note": "ReadyArt Wicked Tutu card: temperature 1.0, top-p 0.92."
+    },
     {
       "match": "artemis|cydonia|rocinante|behemoth|skyfall|drummer|magnum|euryale|lumimaid|stheno|nemomix|mag-mell|wayfarer|roleplay|rp-",
       "temperature": 1,
