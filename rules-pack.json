@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "version": "2026.10.20",
+  "version": "2026.10.20.1",
   "notes": [
-    "Level with Mythoscenarium 0.2.142. The model tables are unchanged since 2026.10.19.1: the fixes from 0.2.125 to 0.2.142 (sprite style, speaker names, creatures, children always clothed) live in the app's code, so they need the new build."
+    "The tables built into Mythoscenarium 0.2.152."
   ],
   "textPresets": [
     {
@@ -543,6 +543,13 @@
         "trigger": "m4ng41nk",
         "strength": 0.85
       }
+    },
+    {
+      "id": "doujin",
+      "name": "Doujin",
+      "blurb": "Self-published manga art: flat colours and clean lines, like a doujinshi cover.",
+      "family": "anime",
+      "style": "doujin cover, textless version, official art, anime coloring, flat color, clean lineart, 2000s (style)"
     },
     {
       "id": "comic",
