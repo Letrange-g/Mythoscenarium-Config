@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "version": "2026.10.20.1",
+  "version": "2026.10.20.2",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.152."
+    "The tables built into Mythoscenarium 0.2.153."
   ],
   "textPresets": [
     {
@@ -186,6 +186,42 @@
       "hints": {
         "cfg": 1,
         "steps": 8,
+        "sampler": "res_multistep",
+        "scheduler": "simple"
+      }
+    },
+    {
+      "id": "z-image",
+      "name": "Z-Image (realistic)",
+      "description": "The full Z-Image model behind Turbo, from Alibaba (Apache licence): same size, but it heeds what a picture must not show (\"no earrings\") and varies more between pictures. About four times slower than Turbo. No portrait reference.",
+      "kind": "zimage",
+      "references": false,
+      "files": [
+        {
+          "repo": "Comfy-Org/z_image",
+          "path": "split_files/diffusion_models/z_image_int8_convrot.safetensors",
+          "folder": "diffusion_models",
+          "size": 6201001296
+        },
+        {
+          "repo": "Comfy-Org/z_image_turbo",
+          "path": "split_files/text_encoders/qwen_3_4b_fp8_mixed.safetensors",
+          "folder": "text_encoders",
+          "size": 5631994051
+        },
+        {
+          "repo": "Comfy-Org/z_image_turbo",
+          "path": "split_files/vae/ae.safetensors",
+          "folder": "vae",
+          "size": 335304388
+        }
+      ],
+      "reserveBytes": 9663676416,
+      "steps": 30,
+      "width": 1216,
+      "height": 832,
+      "hints": {
+        "cfg": 4,
         "sampler": "res_multistep",
         "scheduler": "simple"
       }
@@ -505,14 +541,14 @@
       "minVramGB": 24,
       "text": "bartowski/TheDrummer_Rocinante-X-12B-v1-GGUF",
       "anime": "noobai-xl",
-      "real": "z-image-turbo",
+      "real": "z-image",
       "why": "Rocinante at its sharpest build next to the picture model, both whole on the card."
     },
     {
       "minVramGB": 24,
       "text": "bartowski/TheDrummer_Orion-26B-A4B-v1.1-GGUF",
       "anime": "noobai-xl",
-      "real": "z-image-turbo",
+      "real": "z-image",
       "why": "Orion, mostly on the card and a little in your system memory, writes fast and sees pictures you paste.",
       "minRamGB": 32
     },
@@ -520,8 +556,8 @@
       "minVramGB": 32,
       "text": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
       "anime": "noobai-xl",
-      "real": "z-image-turbo",
-      "why": "Artemis, the strongest story model here, at a 4-bit build next to a fast picture model."
+      "real": "z-image",
+      "why": "Artemis, the strongest story model here, at a 4-bit build next to a picture model that draws what the lore says."
     }
   ],
   "looks": [
