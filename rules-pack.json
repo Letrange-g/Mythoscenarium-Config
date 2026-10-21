@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "version": "2026.10.21.1",
+  "version": "2026.10.21.2",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.162."
+    "The tables built into Mythoscenarium 0.2.167."
   ],
   "textPresets": [
     {
@@ -665,8 +665,8 @@
     },
     {
       "id": "doujin",
-      "name": "Doujin",
-      "blurb": "Self-published manga art: flat colours and clean lines, like a doujinshi cover.",
+      "name": "Doujinshi",
+      "blurb": "Self-published (often adult) manga art: flat colours and clean lines, like a doujinshi cover.",
       "family": "anime",
       "style": "doujin cover, textless version, official art, anime coloring, flat color, clean lineart, 2000s (style)"
     },
