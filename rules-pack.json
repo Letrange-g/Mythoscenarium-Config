@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "version": "2026.10.21.4",
+  "version": "2026.10.21.5",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.172."
+    "The tables built into Mythoscenarium 0.2.176."
   ],
   "textPresets": [
     {
@@ -149,10 +149,314 @@
           "size": 336211292
         }
       ],
+      "quants": [
+        {
+          "id": "int8",
+          "label": "int8, small text encoder (default: most room for the story model)",
+          "files": [
+            {
+              "repo": "Comfy-Org/MOSS-Image",
+              "path": "diffusion_models/moss_image_sft_int8_convrot.safetensors",
+              "folder": "diffusion_models",
+              "size": 5413698958
+            },
+            {
+              "repo": "Comfy-Org/MOSS-Image",
+              "path": "text_encoders/qwen3.5_9b_w4a8_gptq.safetensors",
+              "folder": "text_encoders",
+              "size": 7343591088
+            },
+            {
+              "repo": "Comfy-Org/MOSS-Image",
+              "path": "vae/flux2-vae.safetensors",
+              "folder": "vae",
+              "size": 336211292
+            }
+          ],
+          "reserveBytes": 8589934592
+        },
+        {
+          "id": "int8-te8",
+          "label": "int8, 8-bit text encoder (follows prompts a little closer)",
+          "files": [
+            {
+              "repo": "Comfy-Org/MOSS-Image",
+              "path": "diffusion_models/moss_image_sft_int8_convrot.safetensors",
+              "folder": "diffusion_models",
+              "size": 5413698958
+            },
+            {
+              "repo": "Comfy-Org/MOSS-Image",
+              "path": "text_encoders/qwen3.5_9b_int8_convrot.safetensors",
+              "folder": "text_encoders",
+              "size": 9748121532
+            },
+            {
+              "repo": "Comfy-Org/MOSS-Image",
+              "path": "vae/flux2-vae.safetensors",
+              "folder": "vae",
+              "size": 336211292
+            }
+          ],
+          "reserveBytes": 9663676416
+        },
+        {
+          "id": "bf16",
+          "label": "bf16, full precision (best quality, biggest)",
+          "files": [
+            {
+              "repo": "Comfy-Org/MOSS-Image",
+              "path": "diffusion_models/moss_image_sft_bf16.safetensors",
+              "folder": "diffusion_models",
+              "size": 10164655808
+            },
+            {
+              "repo": "Comfy-Org/MOSS-Image",
+              "path": "text_encoders/qwen3.5_9b_bf16.safetensors",
+              "folder": "text_encoders",
+              "size": 19306312328
+            },
+            {
+              "repo": "Comfy-Org/MOSS-Image",
+              "path": "vae/flux2-vae.safetensors",
+              "folder": "vae",
+              "size": 336211292
+            }
+          ],
+          "reserveBytes": 15032385536
+        }
+      ],
       "reserveBytes": 8589934592,
       "steps": 30,
       "width": 1024,
       "height": 768
+    },
+    {
+      "id": "kromoss",
+      "name": "Kromoss",
+      "description": "MOSS-Image retrained on 704,000 pictures by lodestones (who made Chroma), Apache licence: same detail and long-description reading as MOSS, with fewer limits on what it draws. No portrait reference.",
+      "kind": "moss",
+      "references": false,
+      "nsfw": true,
+      "files": [
+        {
+          "repo": "lodestones/Kromoss",
+          "path": "diffusion_models/kromoss_int8_convrot.safetensors",
+          "folder": "diffusion_models",
+          "size": 5413698958
+        },
+        {
+          "repo": "Comfy-Org/MOSS-Image",
+          "path": "text_encoders/qwen3.5_9b_w4a8_gptq.safetensors",
+          "folder": "text_encoders",
+          "size": 7343591088
+        },
+        {
+          "repo": "Comfy-Org/MOSS-Image",
+          "path": "vae/flux2-vae.safetensors",
+          "folder": "vae",
+          "size": 336211292
+        }
+      ],
+      "quants": [
+        {
+          "id": "int8",
+          "label": "int8, small text encoder (default: most room for the story model)",
+          "files": [
+            {
+              "repo": "lodestones/Kromoss",
+              "path": "diffusion_models/kromoss_int8_convrot.safetensors",
+              "folder": "diffusion_models",
+              "size": 5413698958
+            },
+            {
+              "repo": "Comfy-Org/MOSS-Image",
+              "path": "text_encoders/qwen3.5_9b_w4a8_gptq.safetensors",
+              "folder": "text_encoders",
+              "size": 7343591088
+            },
+            {
+              "repo": "Comfy-Org/MOSS-Image",
+              "path": "vae/flux2-vae.safetensors",
+              "folder": "vae",
+              "size": 336211292
+            }
+          ],
+          "reserveBytes": 8589934592
+        },
+        {
+          "id": "int8-te8",
+          "label": "int8, 8-bit text encoder (follows prompts a little closer)",
+          "files": [
+            {
+              "repo": "lodestones/Kromoss",
+              "path": "diffusion_models/kromoss_int8_convrot.safetensors",
+              "folder": "diffusion_models",
+              "size": 5413698958
+            },
+            {
+              "repo": "Comfy-Org/MOSS-Image",
+              "path": "text_encoders/qwen3.5_9b_int8_convrot.safetensors",
+              "folder": "text_encoders",
+              "size": 9748121532
+            },
+            {
+              "repo": "Comfy-Org/MOSS-Image",
+              "path": "vae/flux2-vae.safetensors",
+              "folder": "vae",
+              "size": 336211292
+            }
+          ],
+          "reserveBytes": 9663676416
+        },
+        {
+          "id": "bf16",
+          "label": "bf16, full precision (best quality, biggest)",
+          "files": [
+            {
+              "repo": "lodestones/Kromoss",
+              "path": "diffusion_models/kromoss_bf16.safetensors",
+              "folder": "diffusion_models",
+              "size": 10164655808
+            },
+            {
+              "repo": "Comfy-Org/MOSS-Image",
+              "path": "text_encoders/qwen3.5_9b_bf16.safetensors",
+              "folder": "text_encoders",
+              "size": 19306312328
+            },
+            {
+              "repo": "Comfy-Org/MOSS-Image",
+              "path": "vae/flux2-vae.safetensors",
+              "folder": "vae",
+              "size": 336211292
+            }
+          ],
+          "reserveBytes": 15032385536
+        }
+      ],
+      "reserveBytes": 8589934592,
+      "steps": 30,
+      "width": 1024,
+      "height": 768,
+      "hints": {
+        "cfg": 3
+      }
+    },
+    {
+      "id": "qwen-image-2.1",
+      "name": "Qwen-Image 2.1",
+      "description": "Alibaba's newest picture model: follows long descriptions closely, draws character sprites with a see-through background by itself (no green screen to cut away) and changes a character's expression by editing their sprite, so faces stay the same. Personal use only (Qwen research licence). Slower than the anime models.",
+      "kind": "qwenimage",
+      "references": false,
+      "transparent": true,
+      "edits": true,
+      "files": [
+        {
+          "repo": "Comfy-Org/Qwen-Image-2.1",
+          "path": "diffusion_models/qwen_image_2.1_int8_convrot.safetensors",
+          "folder": "diffusion_models",
+          "size": 7256783064
+        },
+        {
+          "repo": "Comfy-Org/Qwen-Image-2.1",
+          "path": "text_encoders/qwen3vl_8b_w4a8.safetensors",
+          "folder": "text_encoders",
+          "size": 6312105364
+        },
+        {
+          "repo": "Comfy-Org/Qwen-Image-2.1",
+          "path": "vae/qwen_image_2.1_vae_bf16.safetensors",
+          "folder": "vae",
+          "size": 675509688
+        }
+      ],
+      "quants": [
+        {
+          "id": "int8",
+          "label": "int8, small text encoder (default: most room for the story model)",
+          "files": [
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "diffusion_models/qwen_image_2.1_int8_convrot.safetensors",
+              "folder": "diffusion_models",
+              "size": 7256783064
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "text_encoders/qwen3vl_8b_w4a8.safetensors",
+              "folder": "text_encoders",
+              "size": 6312105364
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "vae/qwen_image_2.1_vae_bf16.safetensors",
+              "folder": "vae",
+              "size": 675509688
+            }
+          ],
+          "reserveBytes": 10737418240
+        },
+        {
+          "id": "int8-te8",
+          "label": "int8, 8-bit text encoder (follows prompts a little closer)",
+          "files": [
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "diffusion_models/qwen_image_2.1_int8_convrot.safetensors",
+              "folder": "diffusion_models",
+              "size": 7256783064
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "text_encoders/qwen3vl_8b_int8_convrot.safetensors",
+              "folder": "text_encoders",
+              "size": 9350798360
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "vae/qwen_image_2.1_vae_bf16.safetensors",
+              "folder": "vae",
+              "size": 675509688
+            }
+          ],
+          "reserveBytes": 11811160064
+        },
+        {
+          "id": "bf16",
+          "label": "bf16, full precision (best quality, biggest)",
+          "files": [
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "diffusion_models/qwen_image_2.1_bf16.safetensors",
+              "folder": "diffusion_models",
+              "size": 14230280616
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "text_encoders/qwen3vl_8b_bf16.safetensors",
+              "folder": "text_encoders",
+              "size": 17534334616
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "vae/qwen_image_2.1_vae_bf16.safetensors",
+              "folder": "vae",
+              "size": 675509688
+            }
+          ],
+          "reserveBytes": 18253611008
+        }
+      ],
+      "reserveBytes": 10737418240,
+      "steps": 30,
+      "width": 1024,
+      "height": 768,
+      "hints": {
+        "cfg": 4,
+        "sampler": "euler",
+        "scheduler": "simple"
+      }
     },
     {
       "id": "sdxl",
@@ -301,6 +605,58 @@
           "size": 335304388
         }
       ],
+      "quants": [
+        {
+          "id": "int8",
+          "label": "int8 (default: most room for the story model)",
+          "files": [
+            {
+              "repo": "Comfy-Org/z_image_turbo",
+              "path": "split_files/diffusion_models/z_image_turbo_int8_convrot.safetensors",
+              "folder": "diffusion_models",
+              "size": 6201001296
+            },
+            {
+              "repo": "Comfy-Org/z_image_turbo",
+              "path": "split_files/text_encoders/qwen_3_4b_fp8_mixed.safetensors",
+              "folder": "text_encoders",
+              "size": 5631994051
+            },
+            {
+              "repo": "Comfy-Org/z_image_turbo",
+              "path": "split_files/vae/ae.safetensors",
+              "folder": "vae",
+              "size": 335304388
+            }
+          ],
+          "reserveBytes": 9663676416
+        },
+        {
+          "id": "bf16",
+          "label": "bf16, full precision (best quality, biggest)",
+          "files": [
+            {
+              "repo": "Comfy-Org/z_image_turbo",
+              "path": "split_files/diffusion_models/z_image_turbo_bf16.safetensors",
+              "folder": "diffusion_models",
+              "size": 12309866400
+            },
+            {
+              "repo": "Comfy-Org/z_image_turbo",
+              "path": "split_files/text_encoders/qwen_3_4b.safetensors",
+              "folder": "text_encoders",
+              "size": 8044982048
+            },
+            {
+              "repo": "Comfy-Org/z_image_turbo",
+              "path": "split_files/vae/ae.safetensors",
+              "folder": "vae",
+              "size": 335304388
+            }
+          ],
+          "reserveBytes": 15032385536
+        }
+      ],
       "reserveBytes": 9663676416,
       "steps": 8,
       "width": 1216,
@@ -336,6 +692,58 @@
           "path": "split_files/vae/ae.safetensors",
           "folder": "vae",
           "size": 335304388
+        }
+      ],
+      "quants": [
+        {
+          "id": "int8",
+          "label": "int8 (default: most room for the story model)",
+          "files": [
+            {
+              "repo": "Comfy-Org/z_image",
+              "path": "split_files/diffusion_models/z_image_int8_convrot.safetensors",
+              "folder": "diffusion_models",
+              "size": 6201001296
+            },
+            {
+              "repo": "Comfy-Org/z_image_turbo",
+              "path": "split_files/text_encoders/qwen_3_4b_fp8_mixed.safetensors",
+              "folder": "text_encoders",
+              "size": 5631994051
+            },
+            {
+              "repo": "Comfy-Org/z_image_turbo",
+              "path": "split_files/vae/ae.safetensors",
+              "folder": "vae",
+              "size": 335304388
+            }
+          ],
+          "reserveBytes": 9663676416
+        },
+        {
+          "id": "bf16",
+          "label": "bf16, full precision (best quality, biggest)",
+          "files": [
+            {
+              "repo": "Comfy-Org/z_image",
+              "path": "split_files/diffusion_models/z_image_bf16.safetensors",
+              "folder": "diffusion_models",
+              "size": 12309866400
+            },
+            {
+              "repo": "Comfy-Org/z_image_turbo",
+              "path": "split_files/text_encoders/qwen_3_4b.safetensors",
+              "folder": "text_encoders",
+              "size": 8044982048
+            },
+            {
+              "repo": "Comfy-Org/z_image_turbo",
+              "path": "split_files/vae/ae.safetensors",
+              "folder": "vae",
+              "size": 335304388
+            }
+          ],
+          "reserveBytes": 15032385536
         }
       ],
       "reserveBytes": 9663676416,
