@@ -1,42 +1,67 @@
 {
   "format": 1,
-  "version": "2026.10.20.4",
+  "version": "2026.10.21.1",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.159."
+    "The tables built into Mythoscenarium 0.2.162."
   ],
   "textPresets": [
     {
       "name": "Artemis 31B v1.2",
       "repo": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
       "description": "Made for roleplay and storytelling, by TheDrummer. Can look at pictures you paste.",
-      "vision": true
+      "vision": true,
+      "rating": {
+        "stars": 5,
+        "note": "Richest scenes and best tension; other characters act on their own. Now and then slips on a sheet detail.",
+        "tested": "2026-10-21"
+      }
     },
     {
       "name": "Orion 26B-A4B v1.1",
       "repo": "bartowski/TheDrummer_Orion-26B-A4B-v1.1-GGUF",
       "description": "Roleplay model by TheDrummer, built on a Gemma 4 mixture of experts: writes fast even with most of it in system memory, so it suits cards under 24 GB. Can look at pictures you paste.",
       "vision": true,
-      "moe": true
+      "moe": true,
+      "rating": {
+        "stars": 4,
+        "note": "Close to Artemis and the fastest of all. Can misspell a name once in a while.",
+        "tested": "2026-10-21"
+      }
     },
     {
       "name": "MeroMero v2 31B",
       "repo": "mradermacher/G4-MeroMero-v2-31B-GGUF",
-      "description": "Roleplay model by zerofata on Gemma 4, the same size as Artemis: its maker reports fewer clichés and more varied rerolls. New, not yet compared with Artemis. Can look at pictures you paste.",
-      "vision": true
+      "description": "Roleplay model by zerofata on Gemma 4, the same size as Artemis: its maker reports fewer clichés and more varied rerolls. Can look at pictures you paste.",
+      "vision": true,
+      "rating": {
+        "stars": 3,
+        "note": "Clean prose with no clichés, but flatter than Artemis; once repeated your own line back.",
+        "tested": "2026-10-21"
+      }
     },
     {
       "name": "Glistening Gem 31B v2.1",
       "repo": "bartowski/sophosympatheia_Glistening-Gem-31B-v2.1-GGUF",
-      "description": "Prose-focused mix of Artemis, MeroMero and an uncensored Gemma 4, by sophosympatheia. Can glue or misspell a word now and then. New, not yet compared with Artemis. Can look at pictures you paste.",
+      "description": "Prose-focused mix of Artemis, MeroMero and an uncensored Gemma 4, by sophosympatheia. Can glue or misspell a word now and then. Can look at pictures you paste.",
       "vision": true,
-      "nsfw": true
+      "nsfw": true,
+      "rating": {
+        "stars": 4,
+        "note": "Follows your actions closely with good pacing; a few stock words.",
+        "tested": "2026-10-21"
+      }
     },
     {
       "name": "Qwen 3.8 27B Uncensored",
       "repo": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
-      "description": "Uncensored Qwen 3.8 by HauhauCS: newer base and long memory, but not trained for roleplay, so its prose can be drier. New, not yet compared with Artemis. Can look at pictures you paste.",
+      "description": "Uncensored Qwen 3.8 by HauhauCS: newer base and long memory, but not trained for roleplay, so its prose can be drier. Can look at pictures you paste.",
       "vision": true,
-      "nsfw": true
+      "nsfw": true,
+      "rating": {
+        "stars": 3,
+        "note": "Short and tidy, keeps to the narration length best, but not tuned for roleplay (tested on another uncensored build of the same model).",
+        "tested": "2026-10-21"
+      }
     },
     {
       "name": "Wicked Tutu 31B",
@@ -49,13 +74,23 @@
       "name": "Rocinante-X 12B",
       "repo": "bartowski/TheDrummer_Rocinante-X-12B-v1-GGUF",
       "description": "Small roleplay model by TheDrummer, for cards and computers with little memory. Cannot look at pictures.",
-      "vision": false
+      "vision": false,
+      "rating": {
+        "stars": 2,
+        "note": "Can ignore what you just did and the narration length; fine when memory is short.",
+        "tested": "2026-10-21"
+      }
     },
     {
       "name": "Cydonia 24B v4.3",
       "repo": "bartowski/TheDrummer_Cydonia-24B-v4.3-GGUF",
       "description": "Mid-size roleplay model by TheDrummer, for 16 to 24 GB cards. Cannot look at pictures.",
-      "vision": false
+      "vision": false,
+      "rating": {
+        "stars": 2,
+        "note": "Shortest replies and the most stock phrases.",
+        "tested": "2026-10-21"
+      }
     }
   ],
   "imagePresets": [
