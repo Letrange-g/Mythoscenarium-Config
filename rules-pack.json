@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "version": "2026.10.21.2",
+  "version": "2026.10.21.3",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.167."
+    "The tables built into Mythoscenarium 0.2.171."
   ],
   "textPresets": [
     {
@@ -168,6 +168,37 @@
         "negativePrefix": "worst quality, old, early, low quality, lowres, signature, username, logo, bad hands",
         "clipSkip": 2,
         "cfg": 5,
+        "sampler": "euler_ancestral",
+        "scheduler": "normal",
+        "tags": true,
+        "referenceWeight": 0.35,
+        "referenceEndAt": 0.6
+      }
+    },
+    {
+      "id": "wai-illustrious",
+      "name": "WAI-Illustrious (anime)",
+      "description": "The anime model players name most on Civitai, a polished Illustrious XL merge: clean, bright anime art that looks good with short prompts. Can be shown a character's portrait. No content filter.",
+      "kind": "checkpoint",
+      "references": true,
+      "nsfw": true,
+      "files": [
+        {
+          "repo": "LyliaEngine/waiIllustriousSDXL_v170",
+          "path": "waiIllustriousSDXL_v170.safetensors",
+          "folder": "checkpoints",
+          "size": 6938040682
+        }
+      ],
+      "reserveBytes": 8589934592,
+      "steps": 28,
+      "width": 1216,
+      "height": 832,
+      "hints": {
+        "promptPrefix": "masterpiece, best quality, very aesthetic, absurdres",
+        "negativePrefix": "worst quality, low quality, lowres, bad anatomy, bad hands, signature, watermark",
+        "clipSkip": 2,
+        "cfg": 6,
         "sampler": "euler_ancestral",
         "scheduler": "normal",
         "tags": true,
