@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "version": "2026.10.22.2",
+  "version": "2026.10.22.3",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.190."
+    "The tables built into Mythoscenarium 0.2.191."
   ],
   "textPresets": [
     {
@@ -58,7 +58,8 @@
       "rating": {
         "stars": 3,
         "story": 3,
-        "app": 3,
+        "app": 4,
+        "keeper": 100,
         "note": "Clean prose with no clichés, but flatter than Artemis; once repeated your own line back.",
         "tested": "2026-10-21"
       }
@@ -72,7 +73,7 @@
       "rating": {
         "stars": 4,
         "story": 5,
-        "app": 4,
+        "app": 5,
         "keeper": 100,
         "note": "Follows your actions closely with good pacing; a few stock words.",
         "tested": "2026-10-21"
@@ -88,6 +89,7 @@
         "stars": 3,
         "story": 4,
         "app": 5,
+        "keeper": 82,
         "note": "Short and tidy, keeps to the narration length best, but not tuned for roleplay (tested on another uncensored build of the same model).",
         "tested": "2026-10-21"
       }
@@ -108,6 +110,7 @@
         "stars": 2,
         "story": 1,
         "app": 2,
+        "keeper": 18,
         "note": "Can ignore what you just did and the narration length; fine when memory is short.",
         "tested": "2026-10-21"
       }
@@ -121,6 +124,7 @@
         "stars": 2,
         "story": 3,
         "app": 3,
+        "keeper": 64,
         "note": "Shortest replies and the most stock phrases.",
         "tested": "2026-10-21"
       }
