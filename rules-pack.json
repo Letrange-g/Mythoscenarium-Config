@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "version": "2026.10.21.5",
+  "version": "2026.10.22.1",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.176."
+    "The tables built into Mythoscenarium 0.2.182."
   ],
   "textPresets": [
     {
@@ -229,7 +229,14 @@
       "reserveBytes": 8589934592,
       "steps": 30,
       "width": 1024,
-      "height": 768
+      "height": 768,
+      "rating": {
+        "stars": 3,
+        "story": 4,
+        "app": 3,
+        "note": "Reads whole sentences well and keeps to them; plain looks, and it cannot copy a portrait.",
+        "tested": "2026-10-17"
+      }
     },
     {
       "id": "kromoss",
@@ -341,6 +348,13 @@
       "height": 768,
       "hints": {
         "cfg": 3
+      },
+      "rating": {
+        "stars": 3,
+        "story": 4,
+        "app": 3,
+        "note": "MOSS retrained without its filter, same strengths and limits as MOSS-Image.",
+        "tested": "not yet"
       }
     },
     {
@@ -456,6 +470,13 @@
         "cfg": 4,
         "sampler": "euler",
         "scheduler": "simple"
+      },
+      "rating": {
+        "stars": 5,
+        "story": 5,
+        "app": 5,
+        "note": "Sharp art in the style asked, sprites drawn already cut out, expressions edited from the same face. Personal-use licence.",
+        "tested": "2026-10-22"
       }
     },
     {
@@ -475,7 +496,14 @@
       "reserveBytes": 8589934592,
       "steps": 30,
       "width": 1216,
-      "height": 832
+      "height": 832,
+      "rating": {
+        "stars": 3,
+        "story": 2,
+        "app": 4,
+        "note": "Copies a portrait and takes LoRAs, but reads only short tag-like prompts and loses details.",
+        "tested": "not yet"
+      }
     },
     {
       "id": "noobai-xl",
@@ -506,6 +534,13 @@
         "tags": true,
         "referenceWeight": 0.35,
         "referenceEndAt": 0.6
+      },
+      "rating": {
+        "stars": 4,
+        "story": 3,
+        "app": 4,
+        "note": "Strong anime with Danbooru tags and portrait copying; long descriptions lose details, puzzled faces need care.",
+        "tested": "2026-10-19"
       }
     },
     {
@@ -537,6 +572,13 @@
         "tags": true,
         "referenceWeight": 0.35,
         "referenceEndAt": 0.6
+      },
+      "rating": {
+        "stars": 4,
+        "story": 3,
+        "app": 4,
+        "note": "The anime model most recommended by users: clean, consistent faces; tag prompts like NoobAI.",
+        "tested": "not yet"
       }
     },
     {
@@ -577,6 +619,13 @@
         "sampler": "er_sde",
         "scheduler": "simple",
         "tags": true
+      },
+      "rating": {
+        "stars": 3,
+        "story": 3,
+        "app": 4,
+        "note": "Small anime model for 8 to 12 GB cards; fast, fewer details.",
+        "tested": "not yet"
       }
     },
     {
@@ -666,6 +715,13 @@
         "steps": 8,
         "sampler": "res_multistep",
         "scheduler": "simple"
+      },
+      "rating": {
+        "stars": 4,
+        "story": 4,
+        "app": 4,
+        "note": "Realistic pictures in 8 steps, follows sentences well; no portrait copying yet.",
+        "tested": "not yet"
       }
     },
     {
@@ -754,6 +810,13 @@
         "cfg": 4,
         "sampler": "res_multistep",
         "scheduler": "simple"
+      },
+      "rating": {
+        "stars": 4,
+        "story": 4,
+        "app": 3,
+        "note": "The full Z-Image: richer pictures and a real negative prompt, slower than Turbo.",
+        "tested": "not yet"
       }
     },
     {
@@ -773,7 +836,14 @@
       "reserveBytes": 12884901888,
       "steps": 20,
       "width": 1216,
-      "height": 832
+      "height": 832,
+      "rating": {
+        "stars": 4,
+        "story": 4,
+        "app": 2,
+        "note": "Good-looking and follows prompts, but heavy, with no portrait copying or LoRAs here.",
+        "tested": "2026-10-18"
+      }
     },
     {
       "id": "chroma-hd",
@@ -805,7 +875,14 @@
       "reserveBytes": 11811160064,
       "steps": 28,
       "width": 1216,
-      "height": 832
+      "height": 832,
+      "rating": {
+        "stars": 4,
+        "story": 4,
+        "app": 2,
+        "note": "Uncensored Flux, a 3D look; drew full-body sheets for sprites until the prompt was changed. Heavy.",
+        "tested": "2026-10-18"
+      }
     },
     {
       "id": "hidream-full",
@@ -854,7 +931,14 @@
       "reserveBytes": 20401094656,
       "steps": 50,
       "width": 1216,
-      "height": 832
+      "height": 832,
+      "rating": {
+        "stars": 4,
+        "story": 5,
+        "app": 1,
+        "note": "Follows long prompts best of the older ones, but 19 GB and slow: little room left for the story model.",
+        "tested": "not yet"
+      }
     }
   ],
   "promptRules": [
