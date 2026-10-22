@@ -2,7 +2,7 @@
   "format": 1,
   "version": "2026.10.22.3",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.191."
+    "The tables built into Mythoscenarium 0.2.196."
   ],
   "textPresets": [
     {
@@ -14,7 +14,7 @@
         "stars": 5,
         "story": 4,
         "app": 4,
-        "keeper": 91,
+        "keeper": 100,
         "note": "Richest scenes and best tension; other characters act on their own. Now and then slips on a sheet detail.",
         "tested": "2026-10-21"
       }
@@ -45,7 +45,7 @@
         "stars": 4,
         "story": 4,
         "app": 5,
-        "keeper": 91,
+        "keeper": 100,
         "note": "Stays in intimate scenes with dialogue where others fade out, and fast; a few stock words.",
         "tested": "2026-10-21"
       }
