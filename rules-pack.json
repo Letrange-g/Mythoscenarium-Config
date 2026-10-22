@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "version": "2026.10.22.3",
+  "version": "2026.10.22.4",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.196."
+    "The tables built into Mythoscenarium 0.2.207."
   ],
   "textPresets": [
     {
@@ -485,6 +485,13 @@
         "app": 5,
         "note": "Sharp art in the style asked, sprites drawn already cut out, expressions edited from the same face. Personal-use licence.",
         "tested": "2026-10-22"
+      },
+      "fastEdits": {
+        "repo": "lightx2v/Qwen-Image-2.1-Lightning",
+        "path": "pytorch_lora_weights.safetensors",
+        "file": "Qwen-Image-2.1-Lightning.safetensors",
+        "size": 67144280,
+        "steps": 8
       }
     },
     {
@@ -1101,15 +1108,15 @@
   "recommendations": [
     {
       "minVramGB": 24,
-      "text": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
-      "image": "z-image",
-      "why": "Artemis at a good build next to Z-Image, which follows busy scenes closely and heeds what the lore says a picture must not show."
+      "text": "bartowski/TheDrummer_Orion-26B-A4B-v1.1-GGUF",
+      "image": "qwen-image-2.1",
+      "why": "Qwen-Image follows busy scenes closely in any style and heeds what the lore says a picture must not show; Orion keeps part of itself in system memory to leave it room."
     },
     {
       "minVramGB": 32,
       "text": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
-      "image": "z-image",
-      "why": "Z-Image follows scenes closely and heeds what the lore says a picture must not show; at 6 GB it leaves Artemis a sharper build than Chroma would."
+      "image": "qwen-image-2.1@int8-te8",
+      "why": "Artemis, the strongest story model here, next to Qwen-Image, which follows scenes closely in any style and heeds what the lore says a picture must not show."
     },
     {
       "minVramGB": 16,
