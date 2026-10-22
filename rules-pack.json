@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "version": "2026.10.22.1",
+  "version": "2026.10.22.2",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.182."
+    "The tables built into Mythoscenarium 0.2.190."
   ],
   "textPresets": [
     {
@@ -14,6 +14,7 @@
         "stars": 5,
         "story": 4,
         "app": 4,
+        "keeper": 91,
         "note": "Richest scenes and best tension; other characters act on their own. Now and then slips on a sheet detail.",
         "tested": "2026-10-21"
       }
@@ -28,6 +29,7 @@
         "stars": 4,
         "story": 4,
         "app": 4,
+        "keeper": 82,
         "note": "Close to Artemis and the fastest of all. Can misspell a name once in a while.",
         "tested": "2026-10-21"
       }
@@ -43,6 +45,7 @@
         "stars": 4,
         "story": 4,
         "app": 5,
+        "keeper": 91,
         "note": "Stays in intimate scenes with dialogue where others fade out, and fast; a few stock words.",
         "tested": "2026-10-21"
       }
@@ -70,6 +73,7 @@
         "stars": 4,
         "story": 5,
         "app": 4,
+        "keeper": 100,
         "note": "Follows your actions closely with good pacing; a few stock words.",
         "tested": "2026-10-21"
       }
@@ -1111,6 +1115,20 @@
       "mode": "novel"
     },
     {
+      "minVramGB": 24,
+      "text": "bartowski/TheDrummer_Orion-26B-A4B-v1.1-GGUF",
+      "image": "qwen-image-2.1",
+      "why": "Qwen-Image draws sprites already cut out and changes faces and clothes on the same person; Orion keeps part of itself in system memory to leave it room.",
+      "mode": "novel"
+    },
+    {
+      "minVramGB": 32,
+      "text": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
+      "image": "qwen-image-2.1@int8-te8",
+      "why": "Artemis, the strongest story model here, next to Qwen-Image, which draws sprites already cut out and changes faces and clothes on the same person.",
+      "mode": "novel"
+    },
+    {
       "minVramGB": 16,
       "text": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
       "image": "none",
@@ -1167,32 +1185,32 @@
     {
       "minVramGB": 16,
       "text": "bartowski/TheDrummer_Orion-26B-A4B-v1.1-GGUF",
-      "anime": "noobai-xl",
-      "real": "z-image-turbo",
-      "why": "Orion, partly in your system memory, writes fast and sees pictures; NoobAI or Z-Image draw in seconds.",
+      "anime": "qwen-image-2.1",
+      "real": "qwen-image-2.1",
+      "why": "Orion, partly in your system memory, writes fast and sees pictures; Qwen-Image draws sprites already cut out and changes their faces and clothes on the same person.",
       "minRamGB": 32
     },
     {
       "minVramGB": 24,
       "text": "bartowski/TheDrummer_Rocinante-X-12B-v1-GGUF",
-      "anime": "noobai-xl",
-      "real": "z-image",
-      "why": "Rocinante at its sharpest build next to the picture model, both whole on the card."
+      "anime": "qwen-image-2.1",
+      "real": "qwen-image-2.1",
+      "why": "Rocinante at a sharp build next to Qwen-Image, which draws sprites already cut out and changes their faces and clothes on the same person."
     },
     {
       "minVramGB": 24,
       "text": "bartowski/TheDrummer_Orion-26B-A4B-v1.1-GGUF",
-      "anime": "noobai-xl",
-      "real": "z-image",
-      "why": "Orion, mostly on the card and a little in your system memory, writes fast and sees pictures you paste.",
+      "anime": "qwen-image-2.1",
+      "real": "qwen-image-2.1",
+      "why": "Orion, mostly on the card and a little in your system memory, writes fast and sees pictures you paste; Qwen-Image keeps every sprite the same person.",
       "minRamGB": 32
     },
     {
       "minVramGB": 32,
       "text": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
-      "anime": "noobai-xl",
-      "real": "z-image",
-      "why": "Artemis, the strongest story model here, at a 4-bit build next to a picture model that draws what the lore says."
+      "anime": "qwen-image-2.1@int8-te8",
+      "real": "qwen-image-2.1@int8-te8",
+      "why": "Artemis, the strongest story model here, at a 4-bit build next to Qwen-Image, which draws what the lore says and keeps every sprite the same person."
     }
   ],
   "looks": [
