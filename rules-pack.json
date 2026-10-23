@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "version": "2026.10.23.1",
+  "version": "2026.10.23.2",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.270."
+    "The tables built into Mythoscenarium 0.2.272."
   ],
   "textPresets": [
     {
@@ -368,17 +368,17 @@
     {
       "id": "qwen-image-2.1",
       "name": "Qwen-Image 2.1",
-      "description": "Alibaba's newest picture model: follows long descriptions closely, draws character sprites with a see-through background by itself (no green screen to cut away) and changes a character's expression by editing their sprite, so faces stay the same. Personal use only (Qwen research licence). Slower than the anime models.",
+      "description": "Alibaba's newest picture model: follows long descriptions closely, draws sprites already see-through and changes a character's expression by editing their sprite, so faces stay the same. Ships as Noct Q V4, a merge that draws adult scenes with full anatomy when the story asks and stays dressed otherwise; the plain model is a build to pick too. Personal use only (Qwen research licence).",
       "kind": "qwenimage",
       "references": false,
       "transparent": true,
       "edits": true,
       "files": [
         {
-          "repo": "Comfy-Org/Qwen-Image-2.1",
-          "path": "diffusion_models/qwen_image_2.1_int8_convrot.safetensors",
+          "repo": "Noctaluna/Noct-Q-Uncensored-Qwen-Image-2.1",
+          "path": "NoctQ_V4_int8_convrot.safetensors",
           "folder": "diffusion_models",
-          "size": 7256783064
+          "size": 7256784368
         },
         {
           "repo": "Comfy-Org/Qwen-Image-2.1",
@@ -395,8 +395,33 @@
       ],
       "quants": [
         {
+          "id": "noctq",
+          "label": "Noct Q V4, int8, small text encoder (default: Qwen-Image merged to draw adult scenes and full anatomy)",
+          "files": [
+            {
+              "repo": "Noctaluna/Noct-Q-Uncensored-Qwen-Image-2.1",
+              "path": "NoctQ_V4_int8_convrot.safetensors",
+              "folder": "diffusion_models",
+              "size": 7256784368
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "text_encoders/qwen3vl_8b_w4a8.safetensors",
+              "folder": "text_encoders",
+              "size": 6312105364
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "vae/qwen_image_2.1_vae_bf16.safetensors",
+              "folder": "vae",
+              "size": 675509688
+            }
+          ],
+          "reserveBytes": 10737418240
+        },
+        {
           "id": "int8",
-          "label": "int8, small text encoder (default: most room for the story model)",
+          "label": "Plain Qwen-Image, int8, small text encoder",
           "files": [
             {
               "repo": "Comfy-Org/Qwen-Image-2.1",
@@ -421,7 +446,7 @@
         },
         {
           "id": "int8-te8",
-          "label": "int8, 8-bit text encoder (follows prompts a little closer)",
+          "label": "Plain Qwen-Image, int8, 8-bit text encoder (follows prompts a little closer)",
           "files": [
             {
               "repo": "Comfy-Org/Qwen-Image-2.1",
@@ -446,7 +471,7 @@
         },
         {
           "id": "bf16",
-          "label": "bf16, full precision (best quality, biggest)",
+          "label": "Plain Qwen-Image, bf16, full precision (best quality, biggest)",
           "files": [
             {
               "repo": "Comfy-Org/Qwen-Image-2.1",
@@ -471,7 +496,7 @@
         },
         {
           "id": "nvfp4",
-          "label": "NVFP4, small text encoder (best on RTX 50 cards: looks like int8, 3 GB smaller)",
+          "label": "Plain Qwen-Image, NVFP4, small text encoder (RTX 50 cards only: looks like int8, 3 GB smaller)",
           "files": [
             {
               "repo": "BennyDaBall/Qwen-Image-2.1-NVFP4",
@@ -496,7 +521,7 @@
         },
         {
           "id": "int4",
-          "label": "int4, small text encoder (smallest on any card; a little slower, fabrics a bit blotchy)",
+          "label": "Plain Qwen-Image, int4, small text encoder (smallest on any card; a little slower, fabrics a bit blotchy)",
           "files": [
             {
               "repo": "toxicdog/Qwen-Image-2.1-INT4ConvRot-ComfyUI",
@@ -518,31 +543,6 @@
             }
           ],
           "reserveBytes": 7516192768
-        },
-        {
-          "id": "noctq",
-          "label": "Noct Q V4, uncensored merge, int8 (nudity without a LoRA; leans realistic; to test)",
-          "files": [
-            {
-              "repo": "Noctaluna/Noct-Q-Uncensored-Qwen-Image-2.1",
-              "path": "NoctQ_V4_int8_convrot.safetensors",
-              "folder": "diffusion_models",
-              "size": 7256784368
-            },
-            {
-              "repo": "Comfy-Org/Qwen-Image-2.1",
-              "path": "text_encoders/qwen3vl_8b_w4a8.safetensors",
-              "folder": "text_encoders",
-              "size": 6312105364
-            },
-            {
-              "repo": "Comfy-Org/Qwen-Image-2.1",
-              "path": "vae/qwen_image_2.1_vae_bf16.safetensors",
-              "folder": "vae",
-              "size": 675509688
-            }
-          ],
-          "reserveBytes": 10737418240
         }
       ],
       "reserveBytes": 10737418240,
@@ -558,8 +558,8 @@
         "stars": 5,
         "story": 5,
         "app": 5,
-        "note": "Sharp art in the style asked, sprites drawn already cut out, expressions edited from the same face. Personal-use licence.",
-        "tested": "2026-10-22"
+        "note": "Sharp art in the style asked, sprites drawn already cut out, expressions edited from the same face, adult scenes with full anatomy (Noct Q build). Personal-use licence.",
+        "tested": "2026-10-23"
       },
       "fastEdits": {
         "repo": "lightx2v/Qwen-Image-2.1-Lightning",
@@ -1190,7 +1190,7 @@
     {
       "minVramGB": 32,
       "text": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
-      "image": "qwen-image-2.1@int8-te8",
+      "image": "qwen-image-2.1",
       "why": "Artemis, the strongest story model here, next to Qwen-Image, which follows scenes closely in any style and heeds what the lore says a picture must not show."
     },
     {
@@ -1210,7 +1210,7 @@
     {
       "minVramGB": 32,
       "text": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
-      "image": "qwen-image-2.1@int8-te8",
+      "image": "qwen-image-2.1",
       "why": "Artemis, the strongest story model here, next to Qwen-Image, which draws sprites already cut out and changes faces and clothes on the same person.",
       "mode": "novel"
     },
