@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "version": "2026.10.22.4",
+  "version": "2026.10.23.1",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.207."
+    "The tables built into Mythoscenarium 0.2.270."
   ],
   "textPresets": [
     {
@@ -468,6 +468,81 @@
             }
           ],
           "reserveBytes": 18253611008
+        },
+        {
+          "id": "nvfp4",
+          "label": "NVFP4, small text encoder (best on RTX 50 cards: looks like int8, 3 GB smaller)",
+          "files": [
+            {
+              "repo": "BennyDaBall/Qwen-Image-2.1-NVFP4",
+              "path": "diffusion_models/qwen_image_2.1_nvfp4.safetensors",
+              "folder": "diffusion_models",
+              "size": 4197574664
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "text_encoders/qwen3vl_8b_w4a8.safetensors",
+              "folder": "text_encoders",
+              "size": 6312105364
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "vae/qwen_image_2.1_vae_bf16.safetensors",
+              "folder": "vae",
+              "size": 675509688
+            }
+          ],
+          "reserveBytes": 7516192768
+        },
+        {
+          "id": "int4",
+          "label": "int4, small text encoder (smallest on any card; a little slower, fabrics a bit blotchy)",
+          "files": [
+            {
+              "repo": "toxicdog/Qwen-Image-2.1-INT4ConvRot-ComfyUI",
+              "path": "diffusion_models/qwen_image_2.1_int4_convrot.safetensors",
+              "folder": "diffusion_models",
+              "size": 3666512184
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "text_encoders/qwen3vl_8b_w4a8.safetensors",
+              "folder": "text_encoders",
+              "size": 6312105364
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "vae/qwen_image_2.1_vae_bf16.safetensors",
+              "folder": "vae",
+              "size": 675509688
+            }
+          ],
+          "reserveBytes": 7516192768
+        },
+        {
+          "id": "noctq",
+          "label": "Noct Q V4, uncensored merge, int8 (nudity without a LoRA; leans realistic; to test)",
+          "files": [
+            {
+              "repo": "Noctaluna/Noct-Q-Uncensored-Qwen-Image-2.1",
+              "path": "NoctQ_V4_int8_convrot.safetensors",
+              "folder": "diffusion_models",
+              "size": 7256784368
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "text_encoders/qwen3vl_8b_w4a8.safetensors",
+              "folder": "text_encoders",
+              "size": 6312105364
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "vae/qwen_image_2.1_vae_bf16.safetensors",
+              "folder": "vae",
+              "size": 675509688
+            }
+          ],
+          "reserveBytes": 10737418240
         }
       ],
       "reserveBytes": 10737418240,
@@ -1230,7 +1305,7 @@
       "name": "Anime",
       "blurb": "Clean anime art, bright colours, expressive faces.",
       "family": "anime",
-      "style": "anime style, cel shading, vibrant colors"
+      "style": "anime style, cel shading, clean colors"
     },
     {
       "id": "manga",
