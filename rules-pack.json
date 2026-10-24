@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "version": "2026.10.23.2",
+  "version": "2026.10.24.1",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.272."
+    "The tables built into Mythoscenarium 0.2.297."
   ],
   "textPresets": [
     {
@@ -1305,7 +1305,8 @@
       "name": "Anime",
       "blurb": "Clean anime art, bright colours, expressive faces.",
       "family": "anime",
-      "style": "anime style, cel shading, clean colors"
+      "style": "anime style, cel shading, clean colors",
+      "prose": "Anime illustration with cel shading, clean lines and bright, clean colours"
     },
     {
       "id": "manga",
@@ -1313,6 +1314,7 @@
       "blurb": "Black and white ink with screentones, like a printed manga page.",
       "family": "anime",
       "style": "manga, monochrome, greyscale, screentones, ink lineart",
+      "prose": "Black and white manga art: ink lineart, screentone shading, greyscale with no colour",
       "lora": {
         "repo": "strkyyy/manga-ink-screentone",
         "trigger": "m4ng41nk",
@@ -1324,35 +1326,40 @@
       "name": "Doujinshi",
       "blurb": "Self-published (often adult) manga art: flat colours and clean lines, like a doujinshi cover.",
       "family": "anime",
-      "style": "doujin cover, textless version, official art, anime coloring, flat color, clean lineart, 2000s (style)"
+      "style": "doujin cover, textless version, official art, anime coloring, flat color, clean lineart, 2000s (style)",
+      "prose": "A 2000s Japanese visual novel CG: anime colouring with flat colours and soft cel shading, clean thin lineart, polished official art, no text"
     },
     {
       "id": "comic",
       "name": "Comic",
       "blurb": "Western comic book: bold outlines, flat colours.",
       "family": "anime",
-      "style": "western comics (style), bold ink outlines, flat colors"
+      "style": "western comics (style), bold ink outlines, flat colors",
+      "prose": "Western comic book art: bold black ink outlines, flat colours, halftone shading"
     },
     {
       "id": "painted",
       "name": "Painted fantasy",
       "blurb": "Painterly fantasy art, like a book cover.",
       "family": "anime",
-      "style": "oil painting (medium), traditional media, painterly fantasy art"
+      "style": "oil painting (medium), traditional media, painterly fantasy art",
+      "prose": "Painterly fantasy book-cover art in oil paint, with visible brushwork and rich, warm light"
     },
     {
       "id": "realistic",
       "name": "Realistic",
       "blurb": "Photographic people and places.",
       "family": "real",
-      "style": "photorealistic, natural light, detailed skin, 35mm photo"
+      "style": "photorealistic, natural light, detailed skin, 35mm photo",
+      "prose": "A photograph taken on a 35mm camera: natural light, real skin texture, real people and places"
     },
     {
       "id": "cgi",
       "name": "3D render",
       "blurb": "Game cinematic or animated film look.",
       "family": "real",
-      "style": "3D render, CGI, game cinematic, soft global illumination"
+      "style": "3D render, CGI, game cinematic, soft global illumination",
+      "prose": "A 3D rendered game cinematic: CGI characters and sets, soft global illumination, detailed materials"
     }
   ]
 }
