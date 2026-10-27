@@ -1,11 +1,12 @@
 {
   "format": 1,
-  "version": "2026.10.27.1",
+  "version": "2026.10.27.2",
   "notes": [
+    "Qwen-Image draws its quick sprite edits (faces and clothes) with Pruna's P-Q 6-step LoRA (688 MB, downloads by itself) instead of Lightning: faster, clearer faces, cleaner cut-outs.",
     "Flux 2 Klein 9B joins the picture models, in two uncensored builds: Miraclein NSFW 1.0 (download it by hand from Civitai) and Aisha NSFW Klein v9.7 (downloads by itself). It is on trial next to Qwen-Image, which stays the default.",
     "Qwen-Image gains two Aisha NSFW v4 builds for photo-real pictures at 8 steps: bf16, and the same file loaded at 8 bits for 16 GB cards. Download it by hand from Civitai.",
     "Z-Image, Flux 1 Dev and HiDream download from Comfy-Org's renamed folders (Z-Image-Turbo, Z-Image, Flux-1-Dev, HiDream).",
-    "The same tables as Mythoscenarium 0.2.392, so installing this pack on an older app brings it level."
+    "The same tables as Mythoscenarium 0.2.398, so installing this pack on an older app brings it level."
   ],
   "textPresets": [
     {
@@ -632,11 +633,11 @@
         "tested": "2026-10-23"
       },
       "fastEdits": {
-        "repo": "lightx2v/Qwen-Image-2.1-Lightning",
-        "path": "pytorch_lora_weights.safetensors",
-        "file": "Qwen-Image-2.1-Lightning.safetensors",
-        "size": 67144280,
-        "steps": 8
+        "repo": "PrunaAI/P-Q-Image-2.1",
+        "path": "p_q_image_2.1_6_steps_v0.2.safetensors",
+        "file": "p_q_image_2.1_6_steps_v0.2.safetensors",
+        "size": 688027008,
+        "steps": 6
       }
     },
     {
