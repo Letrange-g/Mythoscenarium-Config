@@ -1,8 +1,11 @@
 {
   "format": 1,
-  "version": "2026.10.24.1",
+  "version": "2026.10.27.1",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.297."
+    "Flux 2 Klein 9B joins the picture models, in two uncensored builds: Miraclein NSFW 1.0 (download it by hand from Civitai) and Aisha NSFW Klein v9.7 (downloads by itself). It is on trial next to Qwen-Image, which stays the default.",
+    "Qwen-Image gains two Aisha NSFW v4 builds for photo-real pictures at 8 steps: bf16, and the same file loaded at 8 bits for 16 GB cards. Download it by hand from Civitai.",
+    "Z-Image, Flux 1 Dev and HiDream download from Comfy-Org's renamed folders (Z-Image-Turbo, Z-Image, Flux-1-Dev, HiDream).",
+    "The same tables as Mythoscenarium 0.2.392, so installing this pack on an older app brings it level."
   ],
   "textPresets": [
     {
@@ -543,6 +546,73 @@
             }
           ],
           "reserveBytes": 7516192768
+        },
+        {
+          "id": "aisha",
+          "label": "Aisha NSFW v4, bf16, small text encoder (photo-real and about twice as fast; download it by hand from Civitai)",
+          "files": [
+            {
+              "repo": "civitai/aisha-nsfw-v4",
+              "path": "aishaNSFWV4Qwen21_v40Preview.safetensors",
+              "folder": "diffusion_models",
+              "size": 14230280584,
+              "page": "https://civitai.com/models/3009275?modelVersionId=3414853"
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "text_encoders/qwen3vl_8b_w4a8.safetensors",
+              "folder": "text_encoders",
+              "size": 6312105364
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "vae/qwen_image_2.1_vae_bf16.safetensors",
+              "folder": "vae",
+              "size": 675509688
+            }
+          ],
+          "reserveBytes": 18253611008,
+          "hints": {
+            "cfg": 1,
+            "steps": 8,
+            "sampler": "euler",
+            "scheduler": "simple"
+          },
+          "noFastEdits": true
+        },
+        {
+          "id": "aisha-fp8",
+          "label": "Aisha NSFW v4, loaded at 8 bits (the same file, for 16 GB cards; on a 5090 the same pictures as bf16)",
+          "files": [
+            {
+              "repo": "civitai/aisha-nsfw-v4",
+              "path": "aishaNSFWV4Qwen21_v40Preview.safetensors",
+              "folder": "diffusion_models",
+              "size": 14230280584,
+              "page": "https://civitai.com/models/3009275?modelVersionId=3414853"
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "text_encoders/qwen3vl_8b_w4a8.safetensors",
+              "folder": "text_encoders",
+              "size": 6312105364
+            },
+            {
+              "repo": "Comfy-Org/Qwen-Image-2.1",
+              "path": "vae/qwen_image_2.1_vae_bf16.safetensors",
+              "folder": "vae",
+              "size": 675509688
+            }
+          ],
+          "reserveBytes": 10737418240,
+          "hints": {
+            "cfg": 1,
+            "steps": 8,
+            "sampler": "euler",
+            "scheduler": "simple"
+          },
+          "noFastEdits": true,
+          "weightDtype": "fp8_e4m3fn"
         }
       ],
       "reserveBytes": 10737418240,
@@ -726,19 +796,19 @@
       "references": false,
       "files": [
         {
-          "repo": "Comfy-Org/z_image_turbo",
+          "repo": "Comfy-Org/Z-Image-Turbo",
           "path": "split_files/diffusion_models/z_image_turbo_int8_convrot.safetensors",
           "folder": "diffusion_models",
           "size": 6201001296
         },
         {
-          "repo": "Comfy-Org/z_image_turbo",
+          "repo": "Comfy-Org/Z-Image-Turbo",
           "path": "split_files/text_encoders/qwen_3_4b_fp8_mixed.safetensors",
           "folder": "text_encoders",
           "size": 5631994051
         },
         {
-          "repo": "Comfy-Org/z_image_turbo",
+          "repo": "Comfy-Org/Z-Image-Turbo",
           "path": "split_files/vae/ae.safetensors",
           "folder": "vae",
           "size": 335304388
@@ -750,19 +820,19 @@
           "label": "int8 (default: most room for the story model)",
           "files": [
             {
-              "repo": "Comfy-Org/z_image_turbo",
+              "repo": "Comfy-Org/Z-Image-Turbo",
               "path": "split_files/diffusion_models/z_image_turbo_int8_convrot.safetensors",
               "folder": "diffusion_models",
               "size": 6201001296
             },
             {
-              "repo": "Comfy-Org/z_image_turbo",
+              "repo": "Comfy-Org/Z-Image-Turbo",
               "path": "split_files/text_encoders/qwen_3_4b_fp8_mixed.safetensors",
               "folder": "text_encoders",
               "size": 5631994051
             },
             {
-              "repo": "Comfy-Org/z_image_turbo",
+              "repo": "Comfy-Org/Z-Image-Turbo",
               "path": "split_files/vae/ae.safetensors",
               "folder": "vae",
               "size": 335304388
@@ -775,19 +845,19 @@
           "label": "bf16, full precision (best quality, biggest)",
           "files": [
             {
-              "repo": "Comfy-Org/z_image_turbo",
+              "repo": "Comfy-Org/Z-Image-Turbo",
               "path": "split_files/diffusion_models/z_image_turbo_bf16.safetensors",
               "folder": "diffusion_models",
               "size": 12309866400
             },
             {
-              "repo": "Comfy-Org/z_image_turbo",
+              "repo": "Comfy-Org/Z-Image-Turbo",
               "path": "split_files/text_encoders/qwen_3_4b.safetensors",
               "folder": "text_encoders",
               "size": 8044982048
             },
             {
-              "repo": "Comfy-Org/z_image_turbo",
+              "repo": "Comfy-Org/Z-Image-Turbo",
               "path": "split_files/vae/ae.safetensors",
               "folder": "vae",
               "size": 335304388
@@ -822,19 +892,19 @@
       "references": false,
       "files": [
         {
-          "repo": "Comfy-Org/z_image",
+          "repo": "Comfy-Org/Z-Image",
           "path": "split_files/diffusion_models/z_image_int8_convrot.safetensors",
           "folder": "diffusion_models",
           "size": 6201001296
         },
         {
-          "repo": "Comfy-Org/z_image_turbo",
+          "repo": "Comfy-Org/Z-Image-Turbo",
           "path": "split_files/text_encoders/qwen_3_4b_fp8_mixed.safetensors",
           "folder": "text_encoders",
           "size": 5631994051
         },
         {
-          "repo": "Comfy-Org/z_image_turbo",
+          "repo": "Comfy-Org/Z-Image-Turbo",
           "path": "split_files/vae/ae.safetensors",
           "folder": "vae",
           "size": 335304388
@@ -846,19 +916,19 @@
           "label": "int8 (default: most room for the story model)",
           "files": [
             {
-              "repo": "Comfy-Org/z_image",
+              "repo": "Comfy-Org/Z-Image",
               "path": "split_files/diffusion_models/z_image_int8_convrot.safetensors",
               "folder": "diffusion_models",
               "size": 6201001296
             },
             {
-              "repo": "Comfy-Org/z_image_turbo",
+              "repo": "Comfy-Org/Z-Image-Turbo",
               "path": "split_files/text_encoders/qwen_3_4b_fp8_mixed.safetensors",
               "folder": "text_encoders",
               "size": 5631994051
             },
             {
-              "repo": "Comfy-Org/z_image_turbo",
+              "repo": "Comfy-Org/Z-Image-Turbo",
               "path": "split_files/vae/ae.safetensors",
               "folder": "vae",
               "size": 335304388
@@ -871,19 +941,19 @@
           "label": "bf16, full precision (best quality, biggest)",
           "files": [
             {
-              "repo": "Comfy-Org/z_image",
+              "repo": "Comfy-Org/Z-Image",
               "path": "split_files/diffusion_models/z_image_bf16.safetensors",
               "folder": "diffusion_models",
               "size": 12309866400
             },
             {
-              "repo": "Comfy-Org/z_image_turbo",
+              "repo": "Comfy-Org/Z-Image-Turbo",
               "path": "split_files/text_encoders/qwen_3_4b.safetensors",
               "folder": "text_encoders",
               "size": 8044982048
             },
             {
-              "repo": "Comfy-Org/z_image_turbo",
+              "repo": "Comfy-Org/Z-Image-Turbo",
               "path": "split_files/vae/ae.safetensors",
               "folder": "vae",
               "size": 335304388
@@ -910,6 +980,105 @@
       }
     },
     {
+      "id": "flux2-klein",
+      "name": "Flux 2 Klein 9B",
+      "description": "Black Forest Labs' small Flux 2, in uncensored builds: every look from photos to black-and-white manga, full anatomy, a picture in about 4 seconds, and it edits a picture it is shown, so sprites keep their face. Miraclein is downloaded by hand from Civitai; the Aisha build downloads by itself. Non-commercial licence.",
+      "kind": "klein",
+      "references": false,
+      "nsfw": true,
+      "edits": true,
+      "files": [
+        {
+          "repo": "civitai/miraclein-nsfw-1.0",
+          "path": "miracleinNSFWGeneration_10Fp8.safetensors",
+          "folder": "diffusion_models",
+          "size": 9433131176,
+          "page": "https://civitai.com/models/2453960?modelVersionId=2759272"
+        },
+        {
+          "repo": "Comfy-Org/Flux-2-Klein-9B",
+          "path": "split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors",
+          "folder": "text_encoders",
+          "size": 8664848742
+        },
+        {
+          "repo": "Comfy-Org/Flux-2-Klein-9B",
+          "path": "split_files/vae/flux2-vae.safetensors",
+          "folder": "vae",
+          "size": 336211292
+        }
+      ],
+      "quants": [
+        {
+          "id": "miraclein",
+          "label": "Miraclein NSFW 1.0, fp8 (default: the cleanest pictures; download it by hand from Civitai)",
+          "files": [
+            {
+              "repo": "civitai/miraclein-nsfw-1.0",
+              "path": "miracleinNSFWGeneration_10Fp8.safetensors",
+              "folder": "diffusion_models",
+              "size": 9433131176,
+              "page": "https://civitai.com/models/2453960?modelVersionId=2759272"
+            },
+            {
+              "repo": "Comfy-Org/Flux-2-Klein-9B",
+              "path": "split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors",
+              "folder": "text_encoders",
+              "size": 8664848742
+            },
+            {
+              "repo": "Comfy-Org/Flux-2-Klein-9B",
+              "path": "split_files/vae/flux2-vae.safetensors",
+              "folder": "vae",
+              "size": 336211292
+            }
+          ],
+          "reserveBytes": 15032385536
+        },
+        {
+          "id": "aisha-klein",
+          "label": "Aisha NSFW Klein v9.7, fp8 (the strongest expressions; downloads by itself)",
+          "files": [
+            {
+              "repo": "datasets/Aisha-AI-Official/flux-2-klein-models",
+              "path": "aisha_nsfw_beta_v9_7_distilled_fp8.safetensors",
+              "folder": "diffusion_models",
+              "size": 9433032568
+            },
+            {
+              "repo": "Comfy-Org/Flux-2-Klein-9B",
+              "path": "split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors",
+              "folder": "text_encoders",
+              "size": 8664848742
+            },
+            {
+              "repo": "Comfy-Org/Flux-2-Klein-9B",
+              "path": "split_files/vae/flux2-vae.safetensors",
+              "folder": "vae",
+              "size": 336211292
+            }
+          ],
+          "reserveBytes": 15032385536
+        }
+      ],
+      "reserveBytes": 15032385536,
+      "steps": 6,
+      "width": 1024,
+      "height": 1024,
+      "hints": {
+        "cfg": 1.1,
+        "steps": 6,
+        "sampler": "euler"
+      },
+      "rating": {
+        "stars": 4,
+        "story": 4,
+        "app": 3,
+        "note": "Lab, 2026-10-25: true manga and distinct styles, strong sprite expressions, full anatomy, about 4 s a picture. Not yet played in a whole story.",
+        "tested": "2026-10-25"
+      }
+    },
+    {
       "id": "flux-dev",
       "name": "Flux.1 dev",
       "description": "Follows the scene closely and draws believable people and hands. The biggest download, and the story model gets a smaller build next to it.",
@@ -917,7 +1086,7 @@
       "references": false,
       "files": [
         {
-          "repo": "Comfy-Org/flux1-dev",
+          "repo": "Comfy-Org/Flux-1-Dev",
           "path": "flux1-dev-fp8.safetensors",
           "folder": "checkpoints",
           "size": 17246524772
@@ -956,7 +1125,7 @@
           "size": 5157348688
         },
         {
-          "repo": "Comfy-Org/HiDream-I1_ComfyUI",
+          "repo": "Comfy-Org/HiDream",
           "path": "split_files/vae/ae.safetensors",
           "folder": "vae",
           "size": 335304388
@@ -982,37 +1151,37 @@
       "references": false,
       "files": [
         {
-          "repo": "Comfy-Org/HiDream-I1_ComfyUI",
+          "repo": "Comfy-Org/HiDream",
           "path": "split_files/diffusion_models/hidream_i1_full_fp8.safetensors",
           "folder": "diffusion_models",
           "size": 17105946040
         },
         {
-          "repo": "Comfy-Org/HiDream-I1_ComfyUI",
+          "repo": "Comfy-Org/HiDream",
           "path": "split_files/text_encoders/clip_l_hidream.safetensors",
           "folder": "text_encoders",
           "size": 247586528
         },
         {
-          "repo": "Comfy-Org/HiDream-I1_ComfyUI",
+          "repo": "Comfy-Org/HiDream",
           "path": "split_files/text_encoders/clip_g_hidream.safetensors",
           "folder": "text_encoders",
           "size": 1389743104
         },
         {
-          "repo": "Comfy-Org/HiDream-I1_ComfyUI",
+          "repo": "Comfy-Org/HiDream",
           "path": "split_files/text_encoders/t5xxl_fp8_e4m3fn_scaled.safetensors",
           "folder": "text_encoders",
           "size": 5157348688
         },
         {
-          "repo": "Comfy-Org/HiDream-I1_ComfyUI",
+          "repo": "Comfy-Org/HiDream",
           "path": "split_files/text_encoders/llama_3.1_8b_instruct_fp8_scaled.safetensors",
           "folder": "text_encoders",
           "size": 9081258056
         },
         {
-          "repo": "Comfy-Org/HiDream-I1_ComfyUI",
+          "repo": "Comfy-Org/HiDream",
           "path": "split_files/vae/ae.safetensors",
           "folder": "vae",
           "size": 335304388
