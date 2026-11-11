@@ -1,12 +1,8 @@
 {
   "format": 1,
-  "version": "2026.10.27.2",
+  "version": "2026.11.11.1",
   "notes": [
-    "Qwen-Image draws its quick sprite edits (faces and clothes) with Pruna's P-Q 6-step LoRA (688 MB, downloads by itself) instead of Lightning: faster, clearer faces, cleaner cut-outs.",
-    "Flux 2 Klein 9B joins the picture models, in two uncensored builds: Miraclein NSFW 1.0 (download it by hand from Civitai) and Aisha NSFW Klein v9.7 (downloads by itself). It is on trial next to Qwen-Image, which stays the default.",
-    "Qwen-Image gains two Aisha NSFW v4 builds for photo-real pictures at 8 steps: bf16, and the same file loaded at 8 bits for 16 GB cards. Download it by hand from Civitai.",
-    "Z-Image, Flux 1 Dev and HiDream download from Comfy-Org's renamed folders (Z-Image-Turbo, Z-Image, Flux-1-Dev, HiDream).",
-    "The same tables as Mythoscenarium 0.2.398, so installing this pack on an older app brings it level."
+    "The tables built into Mythoscenarium 0.2.809."
   ],
   "textPresets": [
     {
@@ -633,11 +629,20 @@
         "tested": "2026-10-23"
       },
       "fastEdits": {
-        "repo": "PrunaAI/P-Q-Image-2.1",
-        "path": "p_q_image_2.1_6_steps_v0.2.safetensors",
-        "file": "p_q_image_2.1_6_steps_v0.2.safetensors",
-        "size": 688027008,
-        "steps": 6
+        "repo": "PrunaAI/P-Q-Image-2.1-Comfy",
+        "path": "p_q_image_2.1_6_steps_v0.2_comfyui_bf16.safetensors",
+        "file": "p_q_image_2.1_6_steps_v0.2_comfyui_bf16.safetensors",
+        "size": 344061256,
+        "steps": 6,
+        "sigmas": [
+          1,
+          0.961054,
+          0.918949,
+          0.769302,
+          0.545554,
+          0.222292,
+          0
+        ]
       }
     },
     {
@@ -664,44 +669,6 @@
         "app": 4,
         "note": "Copies a portrait and takes LoRAs, but reads only short tag-like prompts and loses details.",
         "tested": "not yet"
-      }
-    },
-    {
-      "id": "noobai-xl",
-      "name": "NoobAI-XL (anime)",
-      "description": "Anime and visual-novel art, built on Illustrious XL. Knows hundreds of expressions by name, can be shown a character's portrait, and draws a picture in seconds. No content filter.",
-      "kind": "checkpoint",
-      "references": true,
-      "nsfw": true,
-      "files": [
-        {
-          "repo": "Laxhar/noobai-XL-1.1",
-          "path": "NoobAI-XL-v1.1.safetensors",
-          "folder": "checkpoints",
-          "size": 7105349958
-        }
-      ],
-      "reserveBytes": 8589934592,
-      "steps": 28,
-      "width": 1216,
-      "height": 832,
-      "hints": {
-        "promptPrefix": "masterpiece, best quality, newest, absurdres, highres",
-        "negativePrefix": "worst quality, old, early, low quality, lowres, signature, username, logo, bad hands",
-        "clipSkip": 2,
-        "cfg": 5,
-        "sampler": "euler_ancestral",
-        "scheduler": "normal",
-        "tags": true,
-        "referenceWeight": 0.35,
-        "referenceEndAt": 0.6
-      },
-      "rating": {
-        "stars": 4,
-        "story": 3,
-        "app": 4,
-        "note": "Strong anime with Danbooru tags and portrait copying; long descriptions lose details, puzzled faces need care.",
-        "tested": "2026-10-19"
       }
     },
     {
@@ -738,7 +705,7 @@
         "stars": 4,
         "story": 3,
         "app": 4,
-        "note": "The anime model most recommended by users: clean, consistent faces; tag prompts like NoobAI.",
+        "note": "The anime model most recommended by users: clean, consistent faces; booru tag prompts.",
         "tested": "not yet"
       }
     },
@@ -1220,17 +1187,6 @@
       "note": "Pony Diffusion V6 XL model card: score tags first, CLIP skip 2, CFG around 7; rating_safe keeps it clothed."
     },
     {
-      "match": "noob",
-      "promptPrefix": "masterpiece, best quality, newest, absurdres, highres",
-      "negativePrefix": "worst quality, old, early, low quality, lowres, signature, username, logo, bad hands",
-      "clipSkip": 2,
-      "cfg": 5,
-      "tags": true,
-      "referenceWeight": 0.35,
-      "referenceEndAt": 0.6,
-      "note": "NoobAI-XL model card: quality and date tags, CFG 5, CLIP skip 2. A FACE reference at 0.7 from a 3D portrait melted NoobAI sprites (Matt, 0.2.59); 0.35 until 60%."
-    },
-    {
       "match": "animagine",
       "promptPrefix": "masterpiece, best quality, very aesthetic, absurdres",
       "negativePrefix": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, jpeg artifacts, signature, watermark, username",
@@ -1276,6 +1232,34 @@
   ],
   "textRules": [
     {
+      "match": "darkside",
+      "temperature": 0.8,
+      "topP": 0.95,
+      "minP": 0.03,
+      "styleNote": "Write flowing prose: no headings, bullet points or bold labels.",
+      "note": "ReadyArt For-Her-Darkside card: temperature 0.8, top-p 0.95, min-p 0.03."
+    },
+    {
+      "match": "dark-craving",
+      "temperature": 1,
+      "topP": 0.92,
+      "styleNote": "Write flowing prose: no headings, bullet points or bold labels.",
+      "note": "ReadyArt Dark Craving 31B v3.0 card: temperature 1.0, top-p 0.92."
+    },
+    {
+      "match": "ina-v\\d",
+      "temperature": 0.9,
+      "topP": 0.9,
+      "minP": 0.05,
+      "note": "Ina card gives no sampler settings: its Llama 3.1 base family, temperature 0.9, top-p 0.9, min-p 0.05."
+    },
+    {
+      "match": "orion",
+      "temperature": 0.9,
+      "styleNote": "Write flowing prose: no headings, bullet points or bold labels.",
+      "note": "TheDrummer Orion card: a low temperature like 0.9 works best (min-p and repetition from the roleplay rule)."
+    },
+    {
       "match": "meromero",
       "temperature": 0.9,
       "minP": 0.05,
@@ -1286,8 +1270,11 @@
       "match": "glistening-gem",
       "temperature": 0.8,
       "minP": 0.1,
+      "dryMultiplier": 0.8,
+      "dryBase": 1.8,
+      "dryAllowedLength": 6,
       "styleNote": "Write flowing prose: no headings, bullet points or bold labels.",
-      "note": "sophosympatheia Glistening Gem card: temperature 0.8, min-p 0.1."
+      "note": "sophosympatheia Glistening Gem v2.1 card: temperature 0.8, min-p 0.1, DRY 0.8 / 1.8 / 6 (its Adaptive-P is not sent)."
     },
     {
       "match": "wicked-tutu",
@@ -1329,9 +1316,10 @@
       "temperature": 0.7,
       "topP": 0.8,
       "topK": 20,
-      "repetitionPenalty": 1.05,
+      "minP": 0,
+      "presencePenalty": 1.5,
       "styleNote": "Write flowing prose: no headings, bullet points or bold labels.",
-      "note": "Qwen model cards: temperature 0.7, top-p 0.8, top-k 20, repetition penalty 1.05."
+      "note": "Qwen3.8 cards (non-thinking): temperature 0.7, top-p 0.8, top-k 20, min-p 0, presence penalty 1.5, no repetition penalty."
     },
     {
       "match": "deepseek",
@@ -1366,7 +1354,7 @@
     {
       "minVramGB": 16,
       "text": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
-      "image": "noobai-xl",
+      "image": "wai-illustrious",
       "why": "Anime sprites with clear expressions in seconds, and the small picture model leaves Artemis a bigger build.",
       "mode": "novel"
     },
@@ -1426,17 +1414,17 @@
     {
       "minVramGB": 12,
       "text": "bartowski/TheDrummer_Orion-26B-A4B-v1.1-GGUF",
-      "anime": "noobai-xl",
+      "anime": "wai-illustrious",
       "real": "z-image-turbo",
-      "why": "Orion in your system memory leaves room on the card for NoobAI, the strongest anime model for sprites and expressions.",
+      "why": "Orion in your system memory leaves room on the card for WAI-Illustrious, a clean anime model for sprites and expressions.",
       "minRamGB": 32
     },
     {
       "minVramGB": 16,
       "text": "bartowski/TheDrummer_Rocinante-X-12B-v1-GGUF",
-      "anime": "noobai-xl",
+      "anime": "wai-illustrious",
       "real": "z-image-turbo",
-      "why": "Rocinante at a sharp build and NoobAI both fit on the card."
+      "why": "Rocinante at a sharp build and WAI-Illustrious both fit on the card."
     },
     {
       "minVramGB": 16,
