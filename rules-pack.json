@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "version": "2026.11.10.2",
+  "version": "2026.11.11.1",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.780."
+    "The tables built into Mythoscenarium 0.2.809."
   ],
   "textPresets": [
     {
@@ -672,44 +672,6 @@
       }
     },
     {
-      "id": "noobai-xl",
-      "name": "NoobAI-XL (anime)",
-      "description": "Anime and visual-novel art, built on Illustrious XL. Knows hundreds of expressions by name, can be shown a character's portrait, and draws a picture in seconds. No content filter.",
-      "kind": "checkpoint",
-      "references": true,
-      "nsfw": true,
-      "files": [
-        {
-          "repo": "Laxhar/noobai-XL-1.1",
-          "path": "NoobAI-XL-v1.1.safetensors",
-          "folder": "checkpoints",
-          "size": 7105349958
-        }
-      ],
-      "reserveBytes": 8589934592,
-      "steps": 28,
-      "width": 1216,
-      "height": 832,
-      "hints": {
-        "promptPrefix": "masterpiece, best quality, newest, absurdres, highres",
-        "negativePrefix": "worst quality, old, early, low quality, lowres, signature, username, logo, bad hands",
-        "clipSkip": 2,
-        "cfg": 5,
-        "sampler": "euler_ancestral",
-        "scheduler": "normal",
-        "tags": true,
-        "referenceWeight": 0.35,
-        "referenceEndAt": 0.6
-      },
-      "rating": {
-        "stars": 4,
-        "story": 3,
-        "app": 4,
-        "note": "Strong anime with Danbooru tags and portrait copying; long descriptions lose details, puzzled faces need care.",
-        "tested": "2026-10-19"
-      }
-    },
-    {
       "id": "wai-illustrious",
       "name": "WAI-Illustrious (anime)",
       "description": "The anime model players name most on Civitai, a polished Illustrious XL merge: clean, bright anime art that looks good with short prompts. Can be shown a character's portrait. No content filter.",
@@ -743,7 +705,7 @@
         "stars": 4,
         "story": 3,
         "app": 4,
-        "note": "The anime model most recommended by users: clean, consistent faces; tag prompts like NoobAI.",
+        "note": "The anime model most recommended by users: clean, consistent faces; booru tag prompts.",
         "tested": "not yet"
       }
     },
@@ -1225,17 +1187,6 @@
       "note": "Pony Diffusion V6 XL model card: score tags first, CLIP skip 2, CFG around 7; rating_safe keeps it clothed."
     },
     {
-      "match": "noob",
-      "promptPrefix": "masterpiece, best quality, newest, absurdres, highres",
-      "negativePrefix": "worst quality, old, early, low quality, lowres, signature, username, logo, bad hands",
-      "clipSkip": 2,
-      "cfg": 5,
-      "tags": true,
-      "referenceWeight": 0.35,
-      "referenceEndAt": 0.6,
-      "note": "NoobAI-XL model card: quality and date tags, CFG 5, CLIP skip 2. A FACE reference at 0.7 from a 3D portrait melted NoobAI sprites (Matt, 0.2.59); 0.35 until 60%."
-    },
-    {
       "match": "animagine",
       "promptPrefix": "masterpiece, best quality, very aesthetic, absurdres",
       "negativePrefix": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, jpeg artifacts, signature, watermark, username",
@@ -1403,7 +1354,7 @@
     {
       "minVramGB": 16,
       "text": "bartowski/TheDrummer_Artemis-31B-v1.2-GGUF",
-      "image": "noobai-xl",
+      "image": "wai-illustrious",
       "why": "Anime sprites with clear expressions in seconds, and the small picture model leaves Artemis a bigger build.",
       "mode": "novel"
     },
@@ -1463,17 +1414,17 @@
     {
       "minVramGB": 12,
       "text": "bartowski/TheDrummer_Orion-26B-A4B-v1.1-GGUF",
-      "anime": "noobai-xl",
+      "anime": "wai-illustrious",
       "real": "z-image-turbo",
-      "why": "Orion in your system memory leaves room on the card for NoobAI, the strongest anime model for sprites and expressions.",
+      "why": "Orion in your system memory leaves room on the card for WAI-Illustrious, a clean anime model for sprites and expressions.",
       "minRamGB": 32
     },
     {
       "minVramGB": 16,
       "text": "bartowski/TheDrummer_Rocinante-X-12B-v1-GGUF",
-      "anime": "noobai-xl",
+      "anime": "wai-illustrious",
       "real": "z-image-turbo",
-      "why": "Rocinante at a sharp build and NoobAI both fit on the card."
+      "why": "Rocinante at a sharp build and WAI-Illustrious both fit on the card."
     },
     {
       "minVramGB": 16,
