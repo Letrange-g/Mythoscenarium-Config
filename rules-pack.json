@@ -1,8 +1,9 @@
 {
   "format": 1,
-  "version": "2026.11.14.1",
+  "version": "2026.11.17",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.976."
+    "The tables built into Mythoscenarium 0.2.976.",
+    "Glistening Gem 31B v2.2 (out 8 November) gets its own settings from its card: temperature 1.0, min-p 0.05, DRY 0.85 / 1.85 / 2. The v2.1 settings stay as they were."
   ],
   "textPresets": [
     {
@@ -1265,6 +1266,16 @@
       "minP": 0.05,
       "styleNote": "Write flowing prose: no headings, bullet points or bold labels.",
       "note": "zerofata G4-MeroMero card: temperature 0.8 to 1.0, min-p 0.05."
+    },
+    {
+      "match": "glistening-gem-31b-v2\\.2",
+      "temperature": 1,
+      "minP": 0.05,
+      "dryMultiplier": 0.85,
+      "dryBase": 1.85,
+      "dryAllowedLength": 2,
+      "styleNote": "Write flowing prose: no headings, bullet points or bold labels.",
+      "note": "sophosympatheia Glistening Gem v2.2 card: temperature 1.0, min-p 0.05, DRY 0.85 / 1.85 / 2."
     },
     {
       "match": "glistening-gem",
