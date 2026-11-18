@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "2026.11.17",
+  "version": "2026.11.18",
   "notes": [
-    "The tables built into Mythoscenarium 0.2.976.",
-    "Glistening Gem 31B v2.2 (out 8 November) gets its own settings from its card: temperature 1.0, min-p 0.05, DRY 0.85 / 1.85 / 2. The v2.1 settings stay as they were."
+    "The tables built into Mythoscenarium 0.4.24.",
+    "Glistening Gem 31B v2.2 joins the story models (mradermacher GGUF, with the vision file), marked new and not yet compared with Artemis. v2.1 stays in the list with its rating."
   ],
   "textPresets": [
     {
@@ -64,6 +64,13 @@
         "note": "Clean prose with no clichés, but flatter than Artemis; once repeated your own line back.",
         "tested": "2026-10-21"
       }
+    },
+    {
+      "name": "Glistening Gem 31B v2.2",
+      "repo": "mradermacher/Glistening-Gem-31B-v2.2-GGUF",
+      "description": "Newer prose-focused mix by sophosympatheia: Artemis, MeroMero, LuneLight and an uncensored Gemma 4. Livelier settings than v2.1. New, not yet compared with Artemis. Can look at pictures you paste.",
+      "vision": true,
+      "nsfw": true
     },
     {
       "name": "Glistening Gem 31B v2.1",
