@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "2026.11.18",
+  "version": "2026.11.21",
   "notes": [
-    "The tables built into Mythoscenarium 0.4.24.",
-    "Glistening Gem 31B v2.2 joins the story models (mradermacher GGUF, with the vision file), marked new and not yet compared with Artemis. v2.1 stays in the list with its rating."
+    "The tables built into Mythoscenarium 0.4.83.",
+    "A Pixel art look joins the wizard's looks."
   ],
   "textPresets": [
     {
@@ -1520,6 +1520,14 @@
       "family": "anime",
       "style": "oil painting (medium), traditional media, painterly fantasy art",
       "prose": "Painterly fantasy book-cover art in oil paint, with visible brushwork and rich, warm light"
+    },
+    {
+      "id": "pixel",
+      "name": "Pixel art",
+      "blurb": "Big square pixels and few colours, like a 1990s adventure game.",
+      "family": "anime",
+      "style": "pixel art, retro game, 16-bit, limited palette, flat shading, sharp pixels",
+      "prose": "Pixel art in the style of a 1990s point-and-click adventure game: big square pixels, a limited colour palette, flat shading with hard edges, no gradients, no blur"
     },
     {
       "id": "realistic",
