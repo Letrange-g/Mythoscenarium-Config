@@ -1,10 +1,9 @@
 {
   "format": 1,
-  "version": "2026.11.23",
+  "version": "2026.11.24",
   "notes": [
-    "The tables built into Mythoscenarium 0.4.83.",
-    "A Pixel art look joins the wizard's looks.",
-    "Flux Dev now says it has a non-commercial licence, like the other picture models that do."
+    "The tables built into Mythoscenarium 0.4.122.",
+    "Glistening Gem v2.2 sends the DRY sequence breakers its card gives (new line, colon, quote, asterisk, comma)."
   ],
   "textPresets": [
     {
@@ -1282,8 +1281,15 @@
       "dryMultiplier": 0.85,
       "dryBase": 1.85,
       "dryAllowedLength": 2,
+      "drySequenceBreakers": [
+        "\n",
+        ":",
+        "\"",
+        "*",
+        ","
+      ],
       "styleNote": "Write flowing prose: no headings, bullet points or bold labels.",
-      "note": "sophosympatheia Glistening Gem v2.2 card: temperature 1.0, min-p 0.05, DRY 0.85 / 1.85 / 2."
+      "note": "sophosympatheia Glistening Gem v2.2 card: temperature 1.0, min-p 0.05, DRY 0.85 / 1.85 / 2, breakers new line : \" * , (its ST import)."
     },
     {
       "match": "glistening-gem",
