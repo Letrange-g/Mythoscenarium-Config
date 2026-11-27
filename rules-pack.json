@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "2026.11.24",
+  "version": "2026.11.27",
   "notes": [
-    "The tables built into Mythoscenarium 0.4.122.",
-    "Glistening Gem v2.2 sends the DRY sequence breakers its card gives (new line, colon, quote, asterisk, comma)."
+    "The tables built into Mythoscenarium 0.4.141.",
+    "Stage pose words name the body and arms only, never the hand's shape, pointing excepted."
   ],
   "textPresets": [
     {
@@ -1557,37 +1557,37 @@
     "thinking": {
       "pose": "THINK_chin_only",
       "face": "curious",
-      "words": "one hand raised to the chin"
+      "words": "one arm bent up, raised to the chin"
     },
     "facepalm": {
       "pose": "EMOTE_cover_eyes",
       "face": "frustrated",
-      "words": "one hand pressed over the eyes"
+      "words": "one arm raised across the face, over the eyes"
     },
     "hand over mouth": {
       "pose": "EMOTE_laugh",
       "face": "surprised",
-      "words": "one hand in front of the mouth"
+      "words": "one arm raised in front of the mouth"
     },
     "hand on heart": {
       "pose": "EMOTE_hand_on_chest",
       "face": "calm",
-      "words": "one hand flat on the chest over the heart"
+      "words": "one arm folded across the chest, over the heart"
     },
     "waving": {
       "pose": "TALK_wave",
       "face": "smiling",
-      "words": "one hand raised, waving"
+      "words": "one arm raised high, waving"
     },
     "hands on hips": {
       "pose": "CONF_hands_on_hips",
       "face": "confident",
-      "words": "both hands on the hips"
+      "words": "both arms akimbo, elbows out, at the hips"
     },
     "hand on hip": {
       "pose": "CONF_hand_on_hip",
       "face": "confident",
-      "words": "one hand on the hip"
+      "words": "one arm akimbo, elbow out, at the hip"
     },
     "pointing": {
       "pose": "CONF_point_forward",
@@ -1602,72 +1602,72 @@
     "shrug": {
       "pose": "TALK_shrug",
       "face": "confused",
-      "words": "shrugging, both palms up"
+      "words": "shrugging, shoulders lifted, both forearms turned outward"
     },
     "explaining": {
       "pose": "TALK_explain",
       "face": "calm",
-      "words": "explaining with both hands"
+      "words": "both forearms raised in front of the body, mid-explanation"
     },
     "open palms": {
       "pose": "TALK_open_palms",
       "face": "hopeful",
-      "words": "both palms open and up"
+      "words": "both forearms held out in front, offering"
     },
     "stop gesture": {
       "pose": "TALK_stop",
       "face": "stern",
-      "words": "one hand up, palm out, stop"
+      "words": "one arm thrust straight out in front, halting"
     },
     "hands clasped": {
       "pose": "NERVOUS_clasped",
       "face": "nervous",
-      "words": "hands clasped together in front"
+      "words": "both arms brought together in front of the waist"
     },
     "fidgeting": {
       "pose": "NERVOUS_fidget",
       "face": "nervous",
-      "words": "fidgeting with the fingers in front"
+      "words": "both arms drawn in close in front of the belly, fidgeting"
     },
     "scratching head": {
       "pose": "NERVOUS_scratch_head",
       "face": "embarrassed",
-      "words": "scratching the back of the head"
+      "words": "one arm raised behind the head"
     },
     "touching hair": {
       "pose": "NERVOUS_hair",
       "face": "shy",
-      "words": "one hand touching the hair"
+      "words": "one arm raised to the hair"
     },
     "finger to lips": {
       "pose": "THINK_finger_lips",
       "face": "curious",
-      "words": "index finger against the lips"
+      "words": "one arm raised to the lips"
     },
     "hand on forehead": {
       "pose": "THINK_forehead",
       "face": "tired",
-      "words": "one hand on the forehead"
+      "words": "one arm raised to the forehead"
     },
     "covering face": {
       "pose": "EMOTE_cover_face",
       "face": "sad",
-      "words": "both hands covering the face"
+      "words": "both arms raised in front of the face, the face hidden behind them"
     },
     "wiping tears": {
       "pose": "EMOTE_wipe_tears",
       "face": "sad",
-      "words": "wiping away tears"
+      "words": "one arm raised to the eyes, wiping away tears"
     },
     "fists clenched": {
       "pose": "EMOTE_clenched_fists",
       "face": "angry",
-      "words": "fists clenched at the sides"
+      "words": "both arms tense at the sides, held slightly away from the body"
     },
     "hands on cheeks": {
       "pose": "EMOTE_cheeks",
       "face": "surprised",
-      "words": "both hands on the cheeks"
+      "words": "both arms raised to the cheeks"
     },
     "pointing angrily": {
       "pose": "EMOTE_point_angry",
@@ -1677,12 +1677,12 @@
     "celebrating": {
       "pose": "EMOTE_celebrate",
       "face": "happy",
-      "words": "both fists raised, celebrating"
+      "words": "both arms raised high, celebrating"
     },
     "reaching out": {
       "pose": "SOCIAL_reach",
       "face": "hopeful",
-      "words": "reaching one hand toward someone"
+      "words": "one arm reaching forward toward someone"
     },
     "open arms": {
       "pose": "SOCIAL_open_arms",
@@ -1692,17 +1692,17 @@
     "whispering": {
       "pose": "SOCIAL_whisper",
       "face": "mischievous",
-      "words": "one hand beside the mouth, whispering"
+      "words": "one arm raised beside the mouth, whispering"
     },
     "hands behind back": {
       "pose": "IDLE_behind_back",
       "face": "calm",
-      "words": "hands clasped behind the back"
+      "words": "both arms behind the back"
     },
     "hand in pocket": {
       "pose": "IDLE_one_pocket",
       "face": "calm",
-      "words": "one hand in the pocket"
+      "words": "one arm down at the pocket"
     }
   }
 }
